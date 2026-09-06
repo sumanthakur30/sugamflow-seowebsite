@@ -17,53 +17,48 @@
   <meta name="twitter:title" content="SugamFlow Knowledge Centre">
   <meta name="twitter:description" content="Short practical articles about pharmacy, lab, OPD, retail, GST billing, inventory and digital invoices — written from how SugamFlow actually works.">
   <link rel="icon" href="/favicon.ico">
-  <style>
-    body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0b1f3a;background:#fff}
-    header,main,footer{width:min(800px,92%);margin:0 auto}
-    header{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:1px solid #e2e8f0;width:min(960px,92%)}
-    nav a,footer a{color:#334155;margin-right:1rem;text-decoration:none}
-    h1{font-size:1.85rem;line-height:1.25}
-    .lead{color:#334155;font-size:1.05rem}
-    .soon{display:inline-block;background:#0f766e;color:#fff;padding:.2rem .5rem;border-radius:4px;font-size:.8rem}
-    h2{margin-top:1.6rem;font-size:1.15rem}
-    p,li{line-height:1.65;color:#1e293b}
-    .related{margin:2rem 0}
-    footer{padding:1.25rem 0 2rem;border-top:1px solid #e2e8f0;width:min(960px,92%)}
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/branding/public-site.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://sugamflow.com/#organization","name":"SugamFlow","url":"https://sugamflow.com/","email":"career@sugamflow.com","logo":"https://sugamflow.com/assets/branding/sugamflow-logo.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"SugamFlow","item":"https://sugamflow.com/"},{"@type":"ListItem","position":2,"name":"Knowledge centre","item":"https://sugamflow.com/blog"}]},{"@type":"WebPage","name":"Knowledge centre","description":"Short practical articles about pharmacy, lab, OPD, retail, GST billing, inventory and digital invoices — written from how SugamFlow actually works.","url":"https://sugamflow.com/blog","isPartOf":{"@id":"https://sugamflow.com/#website"}}]}</script>
 </head>
 <body>
-  <header>
-    <a href="/">SugamFlow</a>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/features">Features</a>
-      <a href="/pricing">Pricing</a>
-      <a href="/faq">FAQ</a>
-      <a href="/docs">Docs</a>
-      <a href="/contact">Contact</a>
-      <a href="/login">Sign in</a>
-    </nav>
+  <header class="sf-header">
+    <div class="sf-container sf-header__inner">
+      <a class="sf-brand" href="/" aria-label="SugamFlow home"><img src="/assets/branding/sugamflow-logo.png" alt="SugamFlow logo" width="140" height="36"></a>
+      <nav class="sf-nav" aria-label="Main navigation">
+        <a href="/features">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/faq">FAQ</a>
+        <a href="/docs">Docs</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <div class="sf-header__actions">
+        <a class="sf-btn sf-btn--ghost sf-btn--sm" href="/login">Sign in</a>
+        <a class="sf-btn sf-btn--primary sf-btn--sm" href="mailto:career@sugamflow.com?subject=SugamFlow%20demo%20request">Book a demo</a>
+      </div>
+    </div>
   </header>
-  <main>
-    <p>SugamFlow</p>
+  <main class="sf-article">
+    <p class="kicker">SugamFlow</p>
     
     <h1>Knowledge centre</h1>
     <p class="lead">A small set of useful articles. Quality over volume. These are not customer case studies with fake names.</p>
     <h2>Articles</h2><p>Each article explains a problem Indian operators actually have, then how SugamFlow addresses it without inventing features.</p>
     
-    <nav class="related" aria-label="Related pages">
+    <nav class="sf-related" aria-label="Related pages">
       <h2>Related pages</h2>
       <ul><li><a href="/features">SugamFlow features</a></li><li><a href="/pricing">Pricing and plans</a></li><li><a href="/faq">Frequently asked questions</a></li><li><a href="/docs">Public documentation</a></li><li><a href="/contact">Contact SugamFlow</a></li><li><a href="/blog/what-is-pharmacy-management-software">What is pharmacy management software</a></li><li><a href="/blog/gst-billing-software">GST billing software</a></li><li><a href="/blog/inventory-management-software">Inventory management software</a></li></ul>
     </nav>
     <p>Official website: <a href="https://sugamflow.com/">SugamFlow</a></p>
-    <p>Last updated 6 September 2026</p>
+    <p class="sf-updated">Last updated 6 September 2026</p>
   </main>
-  <footer>
-    <a href="/privacy">Privacy</a>
-    <a href="/terms">Terms</a>
-    <a href="/security">Security</a>
-    <a href="/sugamflow">What is SugamFlow</a>
+  <footer class="sf-footer">
+    <div class="sf-container sf-footer__bottom">
+      <span>© 2026 SugamFlow</span>
+      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/security">Security</a> · <a href="/sugamflow">What is SugamFlow</a></span>
+    </div>
   </footer>
 </body>
 </html>

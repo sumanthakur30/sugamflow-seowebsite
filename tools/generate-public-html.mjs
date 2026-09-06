@@ -110,7 +110,7 @@ function renderPage(page) {
         )
         .join('')}</section>`
     : '';
-  const soon = page.comingSoon ? '<p class="soon">Coming Soon</p>' : '';
+  const soon = page.comingSoon ? '<p class="sf-soon">Coming Soon</p>' : '';
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -130,53 +130,48 @@ function renderPage(page) {
   <meta name="twitter:title" content="${escapeHtml(page.title)}">
   <meta name="twitter:description" content="${escapeHtml(page.description)}">
   <link rel="icon" href="/favicon.ico">
-  <style>
-    body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0b1f3a;background:#fff}
-    header,main,footer{width:min(800px,92%);margin:0 auto}
-    header{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:1px solid #e2e8f0;width:min(960px,92%)}
-    nav a,footer a{color:#334155;margin-right:1rem;text-decoration:none}
-    h1{font-size:1.85rem;line-height:1.25}
-    .lead{color:#334155;font-size:1.05rem}
-    .soon{display:inline-block;background:#0f766e;color:#fff;padding:.2rem .5rem;border-radius:4px;font-size:.8rem}
-    h2{margin-top:1.6rem;font-size:1.15rem}
-    p,li{line-height:1.65;color:#1e293b}
-    .related{margin:2rem 0}
-    footer{padding:1.25rem 0 2rem;border-top:1px solid #e2e8f0;width:min(960px,92%)}
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/branding/public-site.css">
   <script type="application/ld+json">${JSON.stringify(jsonLd(page))}</script>
 </head>
 <body>
-  <header>
-    <a href="/">SugamFlow</a>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/features">Features</a>
-      <a href="/pricing">Pricing</a>
-      <a href="/faq">FAQ</a>
-      <a href="/docs">Docs</a>
-      <a href="/contact">Contact</a>
-      <a href="/login">Sign in</a>
-    </nav>
+  <header class="sf-header">
+    <div class="sf-container sf-header__inner">
+      <a class="sf-brand" href="/" aria-label="SugamFlow home"><img src="/assets/branding/sugamflow-logo.png" alt="SugamFlow logo" width="140" height="36"></a>
+      <nav class="sf-nav" aria-label="Main navigation">
+        <a href="/features">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/faq">FAQ</a>
+        <a href="/docs">Docs</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <div class="sf-header__actions">
+        <a class="sf-btn sf-btn--ghost sf-btn--sm" href="/login">Sign in</a>
+        <a class="sf-btn sf-btn--primary sf-btn--sm" href="mailto:career@sugamflow.com?subject=SugamFlow%20demo%20request">Book a demo</a>
+      </div>
+    </div>
   </header>
-  <main>
-    <p>SugamFlow</p>
+  <main class="sf-article">
+    <p class="kicker">SugamFlow</p>
     ${soon}
     <h1>${escapeHtml(page.h1)}</h1>
     <p class="lead">${escapeHtml(page.lead)}</p>
     ${sections}
     ${faq}
-    <nav class="related" aria-label="Related pages">
+    <nav class="sf-related" aria-label="Related pages">
       <h2>Related pages</h2>
       <ul>${links.map((link) => `<li><a href="${escapeHtml(link.path)}">${escapeHtml(link.label)}</a></li>`).join('')}</ul>
     </nav>
     <p>Official website: <a href="${origin}/">SugamFlow</a></p>
-    <p>Last updated ${escapeHtml(page.updated)}</p>
+    <p class="sf-updated">Last updated ${escapeHtml(page.updated)}</p>
   </main>
-  <footer>
-    <a href="/privacy">Privacy</a>
-    <a href="/terms">Terms</a>
-    <a href="/security">Security</a>
-    <a href="/sugamflow">What is SugamFlow</a>
+  <footer class="sf-footer">
+    <div class="sf-container sf-footer__bottom">
+      <span>© 2026 SugamFlow</span>
+      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/security">Security</a> · <a href="/sugamflow">What is SugamFlow</a></span>
+    </div>
   </footer>
 </body>
 </html>
@@ -214,8 +209,8 @@ ${sitemapUrls
   .join('\n')}
 </urlset>
 `;
-writeFileSync(join(root, 'src/sitemap.xml'), sitemap);
-writeFileSync(join(root, 'src/llms.txt'), `SugamFlow
+writeFileSync(join(root, 'sitemap.xml'), sitemap);
+writeFileSync(join(root, 'llms.txt'), `SugamFlow
 Category: SaaS / Business Management Software / Healthcare Management Software
 Market: India
 Official website: https://sugamflow.com/
