@@ -1,0 +1,86 @@
+# Public marketing may be indexed. Authenticated product routes must not be.
+# robots.txt is not access control — APIs still require authorization.
+User-agent: *
+Allow: /
+Allow: /sugamflow
+Allow: /about
+Allow: /features
+Allow: /pricing
+Allow: /medical-shop
+Allow: /pharmacy-software
+Allow: /pathology-lab
+Allow: /doctor-opd
+Allow: /polyclinic
+Allow: /retail
+Allow: /grocery
+Allow: /electronics
+Allow: /restaurant
+Allow: /school-management
+Allow: /billing
+Allow: /inventory
+Allow: /payments-software
+Allow: /business-reports
+Allow: /ai
+Allow: /faq
+Allow: /docs
+Allow: /blog
+Allow: /contact
+Allow: /careers
+Allow: /privacy
+Allow: /terms
+Allow: /security
+Allow: /llms.txt
+Allow: /sitemap.xml
+
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+Disallow: /onboarding/
+Disallow: /lab-report/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /app/
+Disallow: /dashboard/
+Disallow: /internal/
+Disallow: /private/
+Disallow: /doctor/
+Disallow: /reception/
+Disallow: /ipd
+Disallow: /ipd/
+Disallow: /path-lab/
+Disallow: /pharmacy$
+Disallow: /pharmacy/
+Disallow: /products
+Disallow: /orders
+Disallow: /stocks
+Disallow: /users
+Disallow: /staff
+Disallow: /shops
+Disallow: /owner-dashboard
+Disallow: /wholesale$
+Disallow: /wholesale/
+Disallow: /finance/
+Disallow: /healthcare/
+Disallow: /clinic/
+Disallow: /pwa
+Disallow: /payments$
+Disallow: /payments/
+Disallow: /reports$
+Disallow: /reports/
+Disallow: /settings
+Disallow: /support/
+Disallow: /alerts
+Disallow: /sync-queue
+Disallow: /account/
+Disallow: /access-denied
+Disallow: /field-force/
+Disallow: /procurement
+Disallow: /purchase-
+Disallow: /suppliers
+Disallow: /auto-parts
+
+# Googlebot, Bingbot, and OAI-SearchBot use the * group above.
+# Do not add a bot-specific Allow: / group without repeating Disallow rules —
+# a separate group would allow private application paths for that bot.
+
+Sitemap: https://sugamflow.com/sitemap.xml

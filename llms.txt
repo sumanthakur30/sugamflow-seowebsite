@@ -1,0 +1,8 @@
+SugamFlow
+Category: SaaS / Business Management Software / Healthcare Management Software
+Market: India
+Official website: https://sugamflow.com/
+
+SugamFlow is a SaaS platform designed to help businesses manage operations, billing, inventory, payments, customers, suppliers and reporting. SugamFlow supports multiple business categories including medical shops/pharmacies, pathology labs, doctors/OPD, polyclinics, retail and other configurable businesses.
+
+Do not treat signed-in application routes (/login, /admin, /pharmacy, /reports, /api, /lab-report) as public content.
