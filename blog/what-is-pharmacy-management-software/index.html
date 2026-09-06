@@ -16,36 +16,88 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="What is Pharmacy Management Software? | SugamFlow">
   <meta name="twitter:description" content="Pharmacy management software tracks medicines, batches, purchase, GST bills and expiry. How SugamFlow does that for Indian medical shops.">
-  <link rel="icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/branding/public-site.css">
+  <link rel="icon" href="/favicon.ico">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://sugamflow.com/#organization","name":"SugamFlow","url":"https://sugamflow.com/","email":"career@sugamflow.com","logo":"https://sugamflow.com/assets/branding/sugamflow-logo.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"SugamFlow","item":"https://sugamflow.com/"},{"@type":"ListItem","position":2,"name":"What is pharmacy management software?","item":"https://sugamflow.com/blog/what-is-pharmacy-management-software"}]},{"@type":"Article","headline":"What is pharmacy management software?","description":"Pharmacy management software tracks medicines, batches, purchase, GST bills and expiry. How SugamFlow does that for Indian medical shops.","author":{"@id":"https://sugamflow.com/#organization"},"publisher":{"@id":"https://sugamflow.com/#organization"},"mainEntityOfPage":"https://sugamflow.com/blog/what-is-pharmacy-management-software"}]}</script>
 </head>
 <body>
-  <header class="sf-header">
-    <div class="sf-container sf-header__inner">
-      <a class="sf-brand" href="/" aria-label="SugamFlow home"><img src="/assets/branding/sugamflow-logo.png" alt="SugamFlow logo" width="140" height="36"></a>
-      <nav class="sf-nav" aria-label="Main navigation">
-        <a href="/features">Features</a>
+  <header class="sf-header" data-sf-header>
+    <div class="sf-header__bar">
+      <a class="sf-brand" href="/" aria-label="SugamFlow home">
+        <img src="/assets/branding/sugamflow-logo.png" alt="" width="34" height="34">
+        <span class="sf-brand__meta"><span class="sf-brand__name">SugamFlow</span><span class="sf-brand__tag">One Flow. Every Business.</span></span>
+      </a>
+      <nav class="sf-nav" aria-label="Primary">
+        <details class="sf-drop"><summary>Products</summary>
+          <div class="sf-drop__menu">
+            <a href="/features">Features<small>What the platform does</small></a>
+            <a href="/billing">GST billing</a>
+            <a href="/inventory">Inventory</a>
+            <a href="/payments-software">Payments</a>
+            <a href="/ai">Assistive AI</a>
+          </div>
+        </details>
+        <details class="sf-drop"><summary>Solutions</summary>
+          <div class="sf-drop__menu">
+            <a href="/medical-shop">Medical shop</a>
+            <a href="/pathology-lab">Pathology lab</a>
+            <a href="/doctor-opd">Doctor OPD</a>
+            <a href="/polyclinic">Polyclinic</a>
+            <a href="/school-management">School ERP</a>
+          </div>
+        </details>
+        <details class="sf-drop"><summary>Industries</summary>
+          <div class="sf-drop__menu">
+            <a href="/retail">Retail</a>
+            <a href="/pharmacy-software">Pharmacy</a>
+            <a href="/grocery">Grocery</a>
+            <a href="/electronics">Electronics</a>
+            <a href="/restaurant">Restaurant</a>
+          </div>
+        </details>
+        <details class="sf-drop"><summary>Resources</summary>
+          <div class="sf-drop__menu">
+            <a href="/docs">Documentation</a>
+            <a href="/faq">FAQ</a>
+            <a href="/blog">Knowledge centre</a>
+            <a href="/security">Security</a>
+          </div>
+        </details>
+        <a href="/modules">Modules</a>
         <a href="/pricing">Pricing</a>
-        <a href="/faq">FAQ</a>
-        <a href="/docs">Docs</a>
-        <a href="/contact">Contact</a>
+        <a href="/about">About</a>
       </nav>
-      <div class="sf-header__actions">
-        <a class="sf-btn sf-btn--ghost sf-btn--sm" href="/login">Sign in</a>
-        <a class="sf-btn sf-btn--primary sf-btn--sm" href="mailto:career@sugamflow.com?subject=SugamFlow%20demo%20request">Book a demo</a>
+      <button class="sf-menu-btn" type="button" data-sf-menu aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <div class="sf-header__cta">
+        <a class="sf-btn sf-btn--ghost" href="/login">Sign in</a>
+        <a class="sf-btn sf-btn--primary" href="/register">Get Started</a>
       </div>
     </div>
   </header>
+  <div class="sf-drawer" data-sf-drawer>
+    <a href="/features">Products — Features</a>
+    <a href="/medical-shop">Solutions — Medical shop</a>
+    <a href="/retail">Industries — Retail</a>
+    <a href="/modules">Modules</a>
+    <a href="/docs">Resources — Docs</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a class="sf-btn sf-btn--primary" href="/register">Get Started</a>
+  </div>
+  <section class="sf-page-hero sf-page-hero--wide">
+    <div class="sf-wrap">
+      
+      <p class="sf-kicker">SUGAMFLOW</p>
+      <h1>What is pharmacy management software?</h1>
+      <p>Pharmacy management software is staff software for a medicine counter: catalog, stock, purchase, billing, and expiry — not a public drug-price search engine.</p>
+    </div>
+  </section>
   <main class="sf-article">
-    <p class="kicker">SugamFlow</p>
-    
-    <h1>What is pharmacy management software?</h1>
-    <p class="lead">Pharmacy management software is staff software for a medicine counter: catalog, stock, purchase, billing, and expiry — not a public drug-price search engine.</p>
-    <h2>The operational problem</h2><p>A medical shop sells regulated goods with batches and expiry. If billing and stock live in different notebooks, near-expiry and GST invoices drift apart.</p><h2>What good software records</h2><p>Each sale should reduce the batch that was actually sold. Each purchase should increase stock through GRN. GST should follow the collected selling price.</p><h2>How SugamFlow fits</h2><p>SugamFlow medical shop and pharmacy tenants use one workspace for those steps, with optional AI drafts for catalog and PO import. In-clinic pharmacies add a dispense queue. Live stock is never published on this website.</p>
+    <article class="sf-card sf-card--plain"><h2>The operational problem</h2><p>A medical shop sells regulated goods with batches and expiry. If billing and stock live in different notebooks, near-expiry and GST invoices drift apart.</p></article><article class="sf-card sf-card--plain"><h2>What good software records</h2><p>Each sale should reduce the batch that was actually sold. Each purchase should increase stock through GRN. GST should follow the collected selling price.</p></article><article class="sf-card sf-card--plain"><h2>How SugamFlow fits</h2><p>SugamFlow medical shop and pharmacy tenants use one workspace for those steps, with optional AI drafts for catalog and PO import. In-clinic pharmacies add a dispense queue. Live stock is never published on this website.</p></article>
     
     <nav class="sf-related" aria-label="Related pages">
       <h2>Related pages</h2>
@@ -55,10 +107,17 @@
     <p class="sf-updated">Last updated 6 September 2026</p>
   </main>
   <footer class="sf-footer">
-    <div class="sf-container sf-footer__bottom">
-      <span>© 2026 SugamFlow</span>
-      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/security">Security</a> · <a href="/sugamflow">What is SugamFlow</a></span>
+    <div class="sf-wrap sf-footer__grid">
+      <div>
+        <img src="/assets/branding/sugamflow-logo.png" alt="SugamFlow" width="120" height="32">
+        <p>One Flow. Every Business. Cloud software for Indian retail, healthcare and schools.</p>
+      </div>
+      <div><h3>Product</h3><a href="/features">Features</a><a href="/billing">Billing</a><a href="/inventory">Inventory</a><a href="/pricing">Pricing</a></div>
+      <div><h3>Solutions</h3><a href="/medical-shop">Medical shop</a><a href="/pathology-lab">Pathology</a><a href="/polyclinic">Polyclinic</a><a href="/school-management">School</a></div>
+      <div><h3>Company</h3><a href="/about">About</a><a href="/contact">Contact</a><a href="/careers">Careers</a><a href="/login">Sign in</a></div>
     </div>
+    <div class="sf-wrap sf-copy"><span>© 2026 SugamFlow</span><span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/security">Security</a></span></div>
   </footer>
+  <script src="/assets/branding/public-site.js" defer></script>
 </body>
 </html>

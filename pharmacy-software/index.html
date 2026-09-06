@@ -16,49 +16,122 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Pharmacy Management Software | SugamFlow">
   <meta name="twitter:description" content="SugamFlow pharmacy software for retail medical stores and in-clinic pharmacies: inventory, GST billing, dispense queue, expiry and supplier purchase.">
-  <link rel="icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/branding/public-site.css">
+  <link rel="icon" href="/favicon.ico">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://sugamflow.com/#organization","name":"SugamFlow","url":"https://sugamflow.com/","email":"career@sugamflow.com","logo":"https://sugamflow.com/assets/branding/sugamflow-logo.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"SugamFlow","item":"https://sugamflow.com/"},{"@type":"ListItem","position":2,"name":"Pharmacy management software","item":"https://sugamflow.com/pharmacy-software"}]},{"@type":"SoftwareApplication","name":"SugamFlow","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://sugamflow.com/pharmacy-software","description":"SugamFlow pharmacy software for retail medical stores and in-clinic pharmacies: inventory, GST billing, dispense queue, expiry and supplier purchase.","provider":{"@id":"https://sugamflow.com/#organization"}}]}</script>
 </head>
 <body>
-  <header class="sf-header">
-    <div class="sf-container sf-header__inner">
-      <a class="sf-brand" href="/" aria-label="SugamFlow home"><img src="/assets/branding/sugamflow-logo.png" alt="SugamFlow logo" width="140" height="36"></a>
-      <nav class="sf-nav" aria-label="Main navigation">
-        <a href="/features">Features</a>
+  <header class="sf-header" data-sf-header>
+    <div class="sf-header__bar">
+      <a class="sf-brand" href="/" aria-label="SugamFlow home">
+        <img src="/assets/branding/sugamflow-logo.png" alt="" width="34" height="34">
+        <span class="sf-brand__meta"><span class="sf-brand__name">SugamFlow</span><span class="sf-brand__tag">One Flow. Every Business.</span></span>
+      </a>
+      <nav class="sf-nav" aria-label="Primary">
+        <details class="sf-drop"><summary>Products</summary>
+          <div class="sf-drop__menu">
+            <a href="/features">Features<small>What the platform does</small></a>
+            <a href="/billing">GST billing</a>
+            <a href="/inventory">Inventory</a>
+            <a href="/payments-software">Payments</a>
+            <a href="/ai">Assistive AI</a>
+          </div>
+        </details>
+        <details class="sf-drop"><summary>Solutions</summary>
+          <div class="sf-drop__menu">
+            <a href="/medical-shop">Medical shop</a>
+            <a href="/pathology-lab">Pathology lab</a>
+            <a href="/doctor-opd">Doctor OPD</a>
+            <a href="/polyclinic">Polyclinic</a>
+            <a href="/school-management">School ERP</a>
+          </div>
+        </details>
+        <details class="sf-drop"><summary>Industries</summary>
+          <div class="sf-drop__menu">
+            <a href="/retail">Retail</a>
+            <a href="/pharmacy-software">Pharmacy</a>
+            <a href="/grocery">Grocery</a>
+            <a href="/electronics">Electronics</a>
+            <a href="/restaurant">Restaurant</a>
+          </div>
+        </details>
+        <details class="sf-drop"><summary>Resources</summary>
+          <div class="sf-drop__menu">
+            <a href="/docs">Documentation</a>
+            <a href="/faq">FAQ</a>
+            <a href="/blog">Knowledge centre</a>
+            <a href="/security">Security</a>
+          </div>
+        </details>
+        <a href="/modules">Modules</a>
         <a href="/pricing">Pricing</a>
-        <a href="/faq">FAQ</a>
-        <a href="/docs">Docs</a>
-        <a href="/contact">Contact</a>
+        <a href="/about">About</a>
       </nav>
-      <div class="sf-header__actions">
-        <a class="sf-btn sf-btn--ghost sf-btn--sm" href="/login">Sign in</a>
-        <a class="sf-btn sf-btn--primary sf-btn--sm" href="mailto:career@sugamflow.com?subject=SugamFlow%20demo%20request">Book a demo</a>
+      <button class="sf-menu-btn" type="button" data-sf-menu aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <div class="sf-header__cta">
+        <a class="sf-btn sf-btn--ghost" href="/login">Sign in</a>
+        <a class="sf-btn sf-btn--primary" href="/register">Get Started</a>
       </div>
     </div>
   </header>
-  <main class="sf-article">
-    <p class="kicker">SugamFlow</p>
-    
-    <h1>Pharmacy management software</h1>
-    <p class="lead">SugamFlow supports two pharmacy patterns: a standalone medical shop, and an in-clinic pharmacy queue linked to a doctor visit. Both stay inside the customer tenant.</p>
-    <h2>Retail pharmacy counter</h2><p>A medical shop tenant uses the same billing and stock spine described on the medical shop page: catalog, batches, purchase, GST invoices, dues, and expiry-oriented stock.</p><h2>In-clinic pharmacy</h2><p>When clinic and pharmacy modules are enabled, staff open a pharmacy queue to dispense against visits. That application URL is /pharmacy and is blocked from indexing. This public page is the crawlable description.</p><h2>What this is not</h2><p>SugamFlow is not a public medicine-price comparison site and does not list another shop’s inventory to search engines.</p>
-    
-    <nav class="sf-related" aria-label="Related pages">
-      <h2>Related pages</h2>
-      <ul><li><a href="/features">SugamFlow features</a></li><li><a href="/pricing">Pricing and plans</a></li><li><a href="/faq">Frequently asked questions</a></li><li><a href="/docs">Public documentation</a></li><li><a href="/contact">Contact SugamFlow</a></li><li><a href="/medical-shop">Medical shop management software</a></li><li><a href="/polyclinic">Polyclinic management software</a></li></ul>
-    </nav>
-    <p>Official website: <a href="https://sugamflow.com/">SugamFlow</a></p>
-    <p class="sf-updated">Last updated 6 September 2026</p>
-  </main>
-  <footer class="sf-footer">
-    <div class="sf-container sf-footer__bottom">
-      <span>© 2026 SugamFlow</span>
-      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/security">Security</a> · <a href="/sugamflow">What is SugamFlow</a></span>
+  <div class="sf-drawer" data-sf-drawer>
+    <a href="/features">Products — Features</a>
+    <a href="/medical-shop">Solutions — Medical shop</a>
+    <a href="/retail">Industries — Retail</a>
+    <a href="/modules">Modules</a>
+    <a href="/docs">Resources — Docs</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a class="sf-btn sf-btn--primary" href="/register">Get Started</a>
+  </div>
+  <section class="sf-page-hero sf-page-hero--wide">
+    <div class="sf-wrap">
+      
+      <p class="sf-kicker">PHARMACY</p>
+      <h1>From the batch to the bill, keep the counter moving.</h1>
+      <p>Medical and pharmacy shops add medicine master, batches, near-expiry and a dispense queue on top of retail billing. Strip/tablet packaging is first-class on those types.</p>
     </div>
+  </section>
+  <div class="sf-wrap" style="padding-bottom:3rem">
+    
+    <div class="sf-desk" aria-hidden="true">
+    <aside class="sf-desk__side"><div class="sf-desk__brand">SugamFlow</div><div class="sf-desk__group">Overview</div><span class="sf-desk__item is-on">Command center</span><div class="sf-desk__group">Orders</div><span class="sf-desk__item is-on">Orders</span><span class="sf-desk__item">Add order</span><span class="sf-desk__item">Scan to order</span><div class="sf-desk__group">People</div><span class="sf-desk__item is-on">Customers</span><span class="sf-desk__item">Staff</span><div class="sf-desk__group">Reports</div><span class="sf-desk__item is-on">Report centre</span></aside>
+    <div class="sf-desk__main">
+      <div class="sf-desk__top"><span>Products</span><span>Orders</span><span>Stocks</span><span>Payment</span></div>
+      <div class="sf-desk__screen">
+        <h3>Orders</h3>
+        <p>Signed-in sale list — Customer, items, date, payment, total.</p>
+        <div class="sf-desk__kpis"><div class="sf-desk__kpi"><small>Today sales</small><strong>₹48,250</strong></div><div class="sf-desk__kpi"><small>Bills</small><strong>24</strong></div><div class="sf-desk__kpi"><small>Due</small><strong>₹6,400</strong></div></div>
+        <div class="sf-desk__table"><div><span>Row</span><span>Status</span><span>Note</span><span>Value</span></div><div><span>Counter walk-in</span><span>3 items</span><span>PAID</span><span>₹1,280</span></div><div><span>Credit sale</span><span>8 items</span><span>PARTIAL</span><span>₹4,920</span></div><div><span>UPI + cash split</span><span>2 items</span><span>PAID</span><span>₹640</span></div></div>
+      </div>
+    </div>
+  </div>
+  <p class="sf-desk-note">Workspace preview uses the real sidebar labels. Sample figures only.</p>
+    <div class="sf-chips" style="justify-content:flex-start;margin:0 0 1.2rem"><span class="sf-chip">Medicine billing</span><span class="sf-chip">Batch &amp; expiry</span><span class="sf-chip">FEFO reserve</span><span class="sf-chip">Dispense queue</span><span class="sf-chip">Walk-in Rx</span><span class="sf-chip">Purchase / GRN</span><span class="sf-chip">Patient records</span><span class="sf-chip">GST</span></div>
+    <div class="sf-feat-grid"><article class="sf-feat"><span class="sf-feat__label">Catalog</span><h4>Medicine master</h4><p>Search and import from the platform medicine list, plus shop custom medicines. Composition and schedule fields live on the product.</p></article><article class="sf-feat"><span class="sf-feat__label">Stock</span><h4>Batch, expiry, FEFO</h4><p>Batches and expiry dates on inventory. Near-expiry report. FEFO reserve when selling from stock-service.</p></article><article class="sf-feat"><span class="sf-feat__label">Counter</span><h4>Pharmacy POS</h4><p>Dedicated pharmacy counter route plus walk-in prescription compose. Multi-unit (strip/tablet) packaging on medical, pharmacy and polyclinic types.</p></article><article class="sf-feat"><span class="sf-feat__label">Dispense</span><h4>Prescription queue</h4><p>Clinic-origin prescriptions land on a dispense queue. Standalone shops still bill walk-ins without a doctor desk.</p></article><article class="sf-feat"><span class="sf-feat__label">Compliance</span><h4>Drug licence &amp; mode</h4><p>Shop record stores a drug licence number. Pharmacy compliance can be OFF, SOFT or STRICT from effective-config.</p></article><article class="sf-feat"><span class="sf-feat__label">People</span><h4>Patients, not only customers</h4><p>Party list uses patient wording. Sales returns and GST stay on the same finance/GST screens as retail.</p></article></div>
+    <div class="sf-flow"><p class="sf-flow__label">How it flows</p><ol class="sf-flow__list"><li>Medicine</li><li>Batch / expiry</li><li>Purchase / GRN</li><li>Dispense or walk-in</li><li>Billing</li><li>Stock update</li><li>Near-expiry / reports</li></ol></div>
+    <p><a class="sf-more" href="/about#industry-pharmacy">See this vertical on About →</a></p>
+  </div>
+      <main class="sf-article">
+        <nav class="sf-related" aria-label="Related pages"><h2>Related pages</h2><ul><li><a href="/features">SugamFlow features</a></li><li><a href="/pricing">Pricing and plans</a></li><li><a href="/faq">Frequently asked questions</a></li><li><a href="/docs">Public documentation</a></li><li><a href="/contact">Contact SugamFlow</a></li><li><a href="/medical-shop">Medical shop management software</a></li><li><a href="/polyclinic">Polyclinic management software</a></li></ul></nav>
+        <p class="sf-updated">Last updated 6 September 2026</p>
+      </main>
+  <footer class="sf-footer">
+    <div class="sf-wrap sf-footer__grid">
+      <div>
+        <img src="/assets/branding/sugamflow-logo.png" alt="SugamFlow" width="120" height="32">
+        <p>One Flow. Every Business. Cloud software for Indian retail, healthcare and schools.</p>
+      </div>
+      <div><h3>Product</h3><a href="/features">Features</a><a href="/billing">Billing</a><a href="/inventory">Inventory</a><a href="/pricing">Pricing</a></div>
+      <div><h3>Solutions</h3><a href="/medical-shop">Medical shop</a><a href="/pathology-lab">Pathology</a><a href="/polyclinic">Polyclinic</a><a href="/school-management">School</a></div>
+      <div><h3>Company</h3><a href="/about">About</a><a href="/contact">Contact</a><a href="/careers">Careers</a><a href="/login">Sign in</a></div>
+    </div>
+    <div class="sf-wrap sf-copy"><span>© 2026 SugamFlow</span><span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/security">Security</a></span></div>
   </footer>
+  <script src="/assets/branding/public-site.js" defer></script>
 </body>
 </html>

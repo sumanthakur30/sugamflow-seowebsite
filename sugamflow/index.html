@@ -16,36 +16,88 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="What is SugamFlow | Business &amp; Healthcare Management Software">
   <meta name="twitter:description" content="SugamFlow is a SaaS platform for Indian businesses to manage billing, inventory, payments, customers, suppliers and reporting across medical shops, labs, clinics, retail and schools.">
-  <link rel="icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/branding/public-site.css">
+  <link rel="icon" href="/favicon.ico">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://sugamflow.com/#organization","name":"SugamFlow","url":"https://sugamflow.com/","email":"career@sugamflow.com","logo":"https://sugamflow.com/assets/branding/sugamflow-logo.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"SugamFlow","item":"https://sugamflow.com/"},{"@type":"ListItem","position":2,"name":"SugamFlow — Business & Healthcare Management Software","item":"https://sugamflow.com/sugamflow"}]},{"@type":"SoftwareApplication","name":"SugamFlow","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://sugamflow.com/sugamflow","description":"SugamFlow is a SaaS platform for Indian businesses to manage billing, inventory, payments, customers, suppliers and reporting across medical shops, labs, clinics, retail and schools.","provider":{"@id":"https://sugamflow.com/#organization"}}]}</script>
 </head>
 <body>
-  <header class="sf-header">
-    <div class="sf-container sf-header__inner">
-      <a class="sf-brand" href="/" aria-label="SugamFlow home"><img src="/assets/branding/sugamflow-logo.png" alt="SugamFlow logo" width="140" height="36"></a>
-      <nav class="sf-nav" aria-label="Main navigation">
-        <a href="/features">Features</a>
+  <header class="sf-header" data-sf-header>
+    <div class="sf-header__bar">
+      <a class="sf-brand" href="/" aria-label="SugamFlow home">
+        <img src="/assets/branding/sugamflow-logo.png" alt="" width="34" height="34">
+        <span class="sf-brand__meta"><span class="sf-brand__name">SugamFlow</span><span class="sf-brand__tag">One Flow. Every Business.</span></span>
+      </a>
+      <nav class="sf-nav" aria-label="Primary">
+        <details class="sf-drop"><summary>Products</summary>
+          <div class="sf-drop__menu">
+            <a href="/features">Features<small>What the platform does</small></a>
+            <a href="/billing">GST billing</a>
+            <a href="/inventory">Inventory</a>
+            <a href="/payments-software">Payments</a>
+            <a href="/ai">Assistive AI</a>
+          </div>
+        </details>
+        <details class="sf-drop"><summary>Solutions</summary>
+          <div class="sf-drop__menu">
+            <a href="/medical-shop">Medical shop</a>
+            <a href="/pathology-lab">Pathology lab</a>
+            <a href="/doctor-opd">Doctor OPD</a>
+            <a href="/polyclinic">Polyclinic</a>
+            <a href="/school-management">School ERP</a>
+          </div>
+        </details>
+        <details class="sf-drop"><summary>Industries</summary>
+          <div class="sf-drop__menu">
+            <a href="/retail">Retail</a>
+            <a href="/pharmacy-software">Pharmacy</a>
+            <a href="/grocery">Grocery</a>
+            <a href="/electronics">Electronics</a>
+            <a href="/restaurant">Restaurant</a>
+          </div>
+        </details>
+        <details class="sf-drop"><summary>Resources</summary>
+          <div class="sf-drop__menu">
+            <a href="/docs">Documentation</a>
+            <a href="/faq">FAQ</a>
+            <a href="/blog">Knowledge centre</a>
+            <a href="/security">Security</a>
+          </div>
+        </details>
+        <a href="/modules">Modules</a>
         <a href="/pricing">Pricing</a>
-        <a href="/faq">FAQ</a>
-        <a href="/docs">Docs</a>
-        <a href="/contact">Contact</a>
+        <a href="/about">About</a>
       </nav>
-      <div class="sf-header__actions">
-        <a class="sf-btn sf-btn--ghost sf-btn--sm" href="/login">Sign in</a>
-        <a class="sf-btn sf-btn--primary sf-btn--sm" href="mailto:career@sugamflow.com?subject=SugamFlow%20demo%20request">Book a demo</a>
+      <button class="sf-menu-btn" type="button" data-sf-menu aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <div class="sf-header__cta">
+        <a class="sf-btn sf-btn--ghost" href="/login">Sign in</a>
+        <a class="sf-btn sf-btn--primary" href="/register">Get Started</a>
       </div>
     </div>
   </header>
+  <div class="sf-drawer" data-sf-drawer>
+    <a href="/features">Products — Features</a>
+    <a href="/medical-shop">Solutions — Medical shop</a>
+    <a href="/retail">Industries — Retail</a>
+    <a href="/modules">Modules</a>
+    <a href="/docs">Resources — Docs</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a class="sf-btn sf-btn--primary" href="/register">Get Started</a>
+  </div>
+  <section class="sf-page-hero sf-page-hero--wide">
+    <div class="sf-wrap">
+      
+      <p class="sf-kicker">SUGAMFLOW</p>
+      <h1>SugamFlow — Business &amp; Healthcare Management Software</h1>
+      <p>SugamFlow is a SaaS platform designed to help businesses manage operations, billing, inventory, payments, customers, suppliers and reporting. SugamFlow supports multiple business categories including medical shops/pharmacies, pathology labs, doctors/OPD, polyclinics, retail and other configurable businesses.</p>
+    </div>
+  </section>
   <main class="sf-article">
-    <p class="kicker">SugamFlow</p>
-    
-    <h1>SugamFlow — Business &amp; Healthcare Management Software</h1>
-    <p class="lead">SugamFlow is a SaaS platform designed to help businesses manage operations, billing, inventory, payments, customers, suppliers and reporting. SugamFlow supports multiple business categories including medical shops/pharmacies, pathology labs, doctors/OPD, polyclinics, retail and other configurable businesses.</p>
-    <h2>What is SugamFlow?</h2><p>SugamFlow is cloud software for Indian operators. Staff open a browser, sign in with an outlet ID and user credentials, and work in a tenant-scoped workspace. The same platform family covers retail counters, wholesale depots, pharmacies, pathology labs, doctor/OPD desks, polyclinics, and school administration. Modules depend on the business type and the subscription assigned to that tenant.</p><h2>Who is SugamFlow for?</h2><p>Owners and staff who need daily billing and stock, plus clinics and labs that need reception, visits, prescriptions, pharmacy dispense, and laboratory worklists. Super Admin operators assign plans and modules. Patients and students do not get a public directory on this website.</p><h2>Supported business types</h2><p>Configured business types in the product include retail-style shops, medical/pharmacy counters, pathology labs, polyclinics, hospitals (IPD where enabled), wholesale depots, auto-parts, and schools. Grocery and electronics shops typically run on the retail/shop catalog with GST and inventory. A dedicated restaurant table-and-KOT product is not released — see the restaurant page for the Coming Soon note.</p><h2>Major features</h2><p>Core operations include product catalog, stock (including batch and expiry where used), purchase/GRN, counter sales, GST invoices, customer and supplier records, dues, cash and online collection, split payment on supported bills, printable and WhatsApp-oriented invoice sharing, and operational reports. Healthcare tenants add reception, OPD encounters, e-prescription, pharmacy queue, path-lab worklists, and IPD screens where the hospital module is enabled.</p><h2>Healthcare ecosystem</h2><p>A polyclinic or hospital tenant can connect the front desk, doctor visit, in-house pharmacy, and in-house lab so a visit is not re-typed at every counter. That is staff software. It is not a public doctor marketplace and it is not a patient social network.</p><h2>Pharmacy management</h2><p>Medical shops and in-clinic pharmacies use medicine/product masters, batch stock, purchase, sales, GST billing, suppliers, customers, returns, expiry-oriented stock views, and a pharmacy dispense queue when the clinic module is on. Public marketing for this capability lives at Medical shop and Pharmacy software pages — the signed-in /pharmacy route remains a private application screen.</p><h2>Pathology lab management</h2><p>Pathology tenants use booking, accession, department worklists, validation, report templates, and a patient report portal that requires an OTP for a specific shop — those portal URLs are noindex and are not listed on the sitemap.</p><h2>Doctor / OPD and polyclinic management</h2><p>Doctors use today’s queue, consultation, and e-prescription. Reception books visits and can record a TPA memo on an encounter. Collect and due amounts stay on the existing billing path. Polyclinic tenants combine those desks with pharmacy and lab when those modules are enabled.</p><h2>Retail and business management</h2><p>Retail tenants use POS-style orders, catalog, stock, purchase, party dues, and GST documents. Wholesale tenants add sale-to-challan-to-invoice style depot flows, credit control, and related finance screens.</p><h2>Billing, GST, inventory, and payments</h2><p>Billing creates invoices from the order/collect flow used in the live product. GST support includes invoice tax, GSTR-oriented summaries, and e-Invoice / e-Way workflows where the tenant has them configured — the product does not invent IRN numbers when a GSP is not connected. Inventory covers products, batches, locations, transfers, and near-expiry views. Payments support cash, online, partial/due, and split cash-plus-online on supported bills.</p><h2>WhatsApp invoice and reports</h2><p>Invoices and some clinical documents can be prepared for WhatsApp sharing from the existing print/share actions (typically a wa.me style hand-off). That is not a claim of a certified WhatsApp Business API on every tenant. Reports include owner dashboards, sales analysis, stock reports, and healthcare operational lists inside the signed-in workspace.</p><h2>AI capabilities</h2><p>Where enabled, SugamFlow offers assistive AI: product photo/barcode capture, purchase-order OCR import, and some draft or insight helpers. These tools do not replace pharmacist, doctor, or accountant review. Availability depends on the tenant plan and server flags.</p><h2>Multi-branch and School ERP</h2><p>A tenant can operate multiple outlets/shops under the same identity model. School administration is a separate vertical on the platform (admission, fees, attendance, exams, and related campus modules) and is not the same UI as a medical shop counter.</p><h2>Security and contact</h2><p>Search engines are invited to index these public pages only. Login, APIs, admin, dashboards, and lab portals stay noindex. Official website: SugamFlow at https://sugamflow.com/. Contact: career@sugamflow.com.</p>
+    <article class="sf-card sf-card--plain"><h2>What is SugamFlow?</h2><p>SugamFlow is cloud software for Indian operators. Staff open a browser, sign in with an outlet ID and user credentials, and work in a tenant-scoped workspace. The same platform family covers retail counters, wholesale depots, pharmacies, pathology labs, doctor/OPD desks, polyclinics, and school administration. Modules depend on the business type and the subscription assigned to that tenant.</p></article><article class="sf-card sf-card--plain"><h2>Who is SugamFlow for?</h2><p>Owners and staff who need daily billing and stock, plus clinics and labs that need reception, visits, prescriptions, pharmacy dispense, and laboratory worklists. Super Admin operators assign plans and modules. Patients and students do not get a public directory on this website.</p></article><article class="sf-card sf-card--plain"><h2>Supported business types</h2><p>Configured business types in the product include retail-style shops, medical/pharmacy counters, pathology labs, polyclinics, hospitals (IPD where enabled), wholesale depots, auto-parts, and schools. Grocery and electronics shops typically run on the retail/shop catalog with GST and inventory. A dedicated restaurant table-and-KOT product is not released — see the restaurant page for the Coming Soon note.</p></article><article class="sf-card sf-card--plain"><h2>Major features</h2><p>Core operations include product catalog, stock (including batch and expiry where used), purchase/GRN, counter sales, GST invoices, customer and supplier records, dues, cash and online collection, split payment on supported bills, printable and WhatsApp-oriented invoice sharing, and operational reports. Healthcare tenants add reception, OPD encounters, e-prescription, pharmacy queue, path-lab worklists, and IPD screens where the hospital module is enabled.</p></article><article class="sf-card sf-card--plain"><h2>Healthcare ecosystem</h2><p>A polyclinic or hospital tenant can connect the front desk, doctor visit, in-house pharmacy, and in-house lab so a visit is not re-typed at every counter. That is staff software. It is not a public doctor marketplace and it is not a patient social network.</p></article><article class="sf-card sf-card--plain"><h2>Pharmacy management</h2><p>Medical shops and in-clinic pharmacies use medicine/product masters, batch stock, purchase, sales, GST billing, suppliers, customers, returns, expiry-oriented stock views, and a pharmacy dispense queue when the clinic module is on. Public marketing for this capability lives at Medical shop and Pharmacy software pages — the signed-in /pharmacy route remains a private application screen.</p></article><article class="sf-card sf-card--plain"><h2>Pathology lab management</h2><p>Pathology tenants use booking, accession, department worklists, validation, report templates, and a patient report portal that requires an OTP for a specific shop — those portal URLs are noindex and are not listed on the sitemap.</p></article><article class="sf-card sf-card--plain"><h2>Doctor / OPD and polyclinic management</h2><p>Doctors use today’s queue, consultation, and e-prescription. Reception books visits and can record a TPA memo on an encounter. Collect and due amounts stay on the existing billing path. Polyclinic tenants combine those desks with pharmacy and lab when those modules are enabled.</p></article><article class="sf-card sf-card--plain"><h2>Retail and business management</h2><p>Retail tenants use POS-style orders, catalog, stock, purchase, party dues, and GST documents. Wholesale tenants add sale-to-challan-to-invoice style depot flows, credit control, and related finance screens.</p></article><article class="sf-card sf-card--plain"><h2>Billing, GST, inventory, and payments</h2><p>Billing creates invoices from the order/collect flow used in the live product. GST support includes invoice tax, GSTR-oriented summaries, and e-Invoice / e-Way workflows where the tenant has them configured — the product does not invent IRN numbers when a GSP is not connected. Inventory covers products, batches, locations, transfers, and near-expiry views. Payments support cash, online, partial/due, and split cash-plus-online on supported bills.</p></article><article class="sf-card sf-card--plain"><h2>WhatsApp invoice and reports</h2><p>Invoices and some clinical documents can be prepared for WhatsApp sharing from the existing print/share actions (typically a wa.me style hand-off). That is not a claim of a certified WhatsApp Business API on every tenant. Reports include owner dashboards, sales analysis, stock reports, and healthcare operational lists inside the signed-in workspace.</p></article><article class="sf-card sf-card--plain"><h2>AI capabilities</h2><p>Where enabled, SugamFlow offers assistive AI: product photo/barcode capture, purchase-order OCR import, and some draft or insight helpers. These tools do not replace pharmacist, doctor, or accountant review. Availability depends on the tenant plan and server flags.</p></article><article class="sf-card sf-card--plain"><h2>Multi-branch and School ERP</h2><p>A tenant can operate multiple outlets/shops under the same identity model. School administration is a separate vertical on the platform (admission, fees, attendance, exams, and related campus modules) and is not the same UI as a medical shop counter.</p></article><article class="sf-card sf-card--plain"><h2>Security and contact</h2><p>Search engines are invited to index these public pages only. Login, APIs, admin, dashboards, and lab portals stay noindex. Official website: SugamFlow at https://sugamflow.com/. Contact: career@sugamflow.com.</p></article>
     
     <nav class="sf-related" aria-label="Related pages">
       <h2>Related pages</h2>
@@ -55,10 +107,17 @@
     <p class="sf-updated">Last updated 6 September 2026</p>
   </main>
   <footer class="sf-footer">
-    <div class="sf-container sf-footer__bottom">
-      <span>© 2026 SugamFlow</span>
-      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/security">Security</a> · <a href="/sugamflow">What is SugamFlow</a></span>
+    <div class="sf-wrap sf-footer__grid">
+      <div>
+        <img src="/assets/branding/sugamflow-logo.png" alt="SugamFlow" width="120" height="32">
+        <p>One Flow. Every Business. Cloud software for Indian retail, healthcare and schools.</p>
+      </div>
+      <div><h3>Product</h3><a href="/features">Features</a><a href="/billing">Billing</a><a href="/inventory">Inventory</a><a href="/pricing">Pricing</a></div>
+      <div><h3>Solutions</h3><a href="/medical-shop">Medical shop</a><a href="/pathology-lab">Pathology</a><a href="/polyclinic">Polyclinic</a><a href="/school-management">School</a></div>
+      <div><h3>Company</h3><a href="/about">About</a><a href="/contact">Contact</a><a href="/careers">Careers</a><a href="/login">Sign in</a></div>
     </div>
+    <div class="sf-wrap sf-copy"><span>© 2026 SugamFlow</span><span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/security">Security</a></span></div>
   </footer>
+  <script src="/assets/branding/public-site.js" defer></script>
 </body>
 </html>

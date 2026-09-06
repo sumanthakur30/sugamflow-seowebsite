@@ -393,7 +393,7 @@
       "path": "/medical-shop",
       "pageId": "medical-shop",
       "title": "Medical Shop Management Software | SugamFlow",
-      "description": "SugamFlow medical shop software for medicine catalog, batch stock, purchase, GST billing, expiry, suppliers, customers, split payments and WhatsApp invoices.",
+      "description": "SugamFlow medical shop software for medicine catalog, batch stock, purchase, GST billing, expiry, suppliers, customers and split payments.",
       "h1": "Medical Shop Management Software",
       "lead": "SugamFlow is medical shop management software for Indian pharmacies and medical counters that need catalog, stock, purchase, GST billing, and collections in one signed-in workspace.",
       "updated": "6 September 2026",
@@ -426,7 +426,7 @@
         {
           "heading": "Suppliers, customers, and payments",
           "paragraphs": [
-            "Supplier and customer/party records stay inside the tenant. Collection supports cash, online, partial due, and split cash-plus-online on supported bills. Invoices can be printed or shared through the WhatsApp-oriented print action."
+            "Supplier and customer/party records stay inside the tenant. Collection supports cash, online, partial due, and split cash-plus-online on supported bills. Invoices print from the signed-in desk."
           ]
         },
         {
@@ -694,9 +694,9 @@
       "path": "/school-management",
       "pageId": "school-management",
       "title": "School Management Software | SugamFlow",
-      "description": "SugamFlow School ERP covers campus operations such as admission, fees, attendance and exams on the same platform family as shop and clinic software.",
-      "h1": "School management software",
-      "lead": "SugamFlow includes a School ERP vertical for campus operations. It uses the same platform identity and subscription model as shops and clinics, with a school-oriented workspace rather than a medical-shop counter.",
+      "description": "SugamFlow can onboard a SCHOOL tenant on the same login and subscription as shops. Campus fee, attendance and exam screens are not in the shop workspace.",
+      "h1": "School tenants on SugamFlow",
+      "lead": "SCHOOL is a real business type: Super Admin can register the organisation and staff use the same login model. Fees, attendance and exams are not shop-management screens.",
       "updated": "6 September 2026",
       "schema": "software",
       "sitemap": true,
@@ -706,9 +706,9 @@
       ],
       "sections": [
         {
-          "heading": "Campus operations",
+          "heading": "What is in this shop stack",
           "paragraphs": [
-            "School tenants are set up for administration work such as admission, fees, attendance, exams, and related campus modules (for example hostel or transport when those modules are enabled for the school). Parent or student portals, when used, are not a public directory on sugamflow.com."
+            "Super Admin can create a school tenant, invite staff, assign a platform subscription, and register school website domains. This website will not list admission, fees, attendance or exams as shop features."
           ]
         },
         {

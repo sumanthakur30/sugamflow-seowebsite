@@ -82,6 +82,227 @@ function jsonLd(page) {
   return { '@context': 'https://schema.org', '@graph': graph };
 }
 
+function chromeHead(extraTitle) {
+  return `<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/branding/public-site.css">
+  <link rel="icon" href="/favicon.ico">`;
+}
+
+function chromeNav(active) {
+  const on = (path) => (active === path ? ' class="is-active"' : '');
+  return `<header class="sf-header" data-sf-header>
+    <div class="sf-header__bar">
+      <a class="sf-brand" href="/" aria-label="SugamFlow home">
+        <img src="/assets/branding/sugamflow-logo.png" alt="" width="34" height="34">
+        <span class="sf-brand__meta"><span class="sf-brand__name">SugamFlow</span><span class="sf-brand__tag">One Flow. Every Business.</span></span>
+      </a>
+      <nav class="sf-nav" aria-label="Primary">
+        <details class="sf-drop"><summary>Products</summary>
+          <div class="sf-drop__menu">
+            <a href="/features">Features<small>What the platform does</small></a>
+            <a href="/billing">GST billing</a>
+            <a href="/inventory">Inventory</a>
+            <a href="/payments-software">Payments</a>
+            <a href="/ai">Assistive AI</a>
+          </div>
+        </details>
+        <details class="sf-drop"><summary>Solutions</summary>
+          <div class="sf-drop__menu">
+            <a href="/medical-shop">Medical shop</a>
+            <a href="/pathology-lab">Pathology lab</a>
+            <a href="/doctor-opd">Doctor OPD</a>
+            <a href="/polyclinic">Polyclinic</a>
+            <a href="/school-management">School ERP</a>
+          </div>
+        </details>
+        <details class="sf-drop"><summary>Industries</summary>
+          <div class="sf-drop__menu">
+            <a href="/retail">Retail</a>
+            <a href="/pharmacy-software">Pharmacy</a>
+            <a href="/grocery">Grocery</a>
+            <a href="/electronics">Electronics</a>
+            <a href="/restaurant">Restaurant</a>
+          </div>
+        </details>
+        <details class="sf-drop"><summary>Resources</summary>
+          <div class="sf-drop__menu">
+            <a href="/docs">Documentation</a>
+            <a href="/faq">FAQ</a>
+            <a href="/blog">Knowledge centre</a>
+            <a href="/security">Security</a>
+          </div>
+        </details>
+        <a href="/modules"${on('/modules')}>Modules</a>
+        <a href="/pricing"${on('/pricing')}>Pricing</a>
+        <a href="/about"${on('/about')}>About</a>
+      </nav>
+      <button class="sf-menu-btn" type="button" data-sf-menu aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <div class="sf-header__cta">
+        <a class="sf-btn sf-btn--ghost" href="/login">Sign in</a>
+        <a class="sf-btn sf-btn--primary" href="/register">Get Started</a>
+      </div>
+    </div>
+  </header>
+  <div class="sf-drawer" data-sf-drawer>
+    <a href="/features">Products — Features</a>
+    <a href="/medical-shop">Solutions — Medical shop</a>
+    <a href="/retail">Industries — Retail</a>
+    <a href="/modules">Modules</a>
+    <a href="/docs">Resources — Docs</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a class="sf-btn sf-btn--primary" href="/register">Get Started</a>
+  </div>`;
+}
+
+function loadInventory() {
+  const src = readFileSync(join(root, 'assets/branding/product-inventory.js'), 'utf8');
+  const fn = new Function('window', `${src}\nreturn window.SF_PRODUCT;`);
+  return fn({});
+}
+
+const inventory = loadInventory();
+
+function loadDesks() {
+  const src = readFileSync(join(root, 'assets/branding/product-desks.js'), 'utf8');
+  const fn = new Function('window', `${src}\nreturn window.SF_DESKS;`);
+  return fn({});
+}
+
+const desks = loadDesks();
+
+const INDUSTRY_DESK = {
+  retail: 'billing',
+  pharmacy: 'billing',
+  wholesale: 'wholesale',
+  clinic: 'clinic',
+  laboratory: 'laboratory',
+  school: 'school'
+};
+
+function workspaceHtml(desk) {
+  if (!desk) {
+    return '';
+  }
+  const side = (desk.sidebar || [])
+    .map((group) => {
+      const items = (group.items || [])
+        .map((item, index) => `<span class="sf-desk__item${index === 0 ? ' is-on' : ''}">${escapeHtml(item)}</span>`)
+        .join('');
+      return `<div class="sf-desk__group">${escapeHtml(group.group)}</div>${items}`;
+    })
+    .join('');
+  const tabs = (desk.header || []).map((tab) => `<span>${escapeHtml(tab)}</span>`).join('');
+  const kpis = (desk.screen.kpis || [])
+    .map((kpi) => `<div class="sf-desk__kpi"><small>${escapeHtml(kpi.label)}</small><strong>${escapeHtml(kpi.value)}</strong></div>`)
+    .join('');
+  const rows = (desk.screen.rows || [])
+    .map((row) => `<div>${row.map((cell) => `<span>${escapeHtml(cell)}</span>`).join('')}</div>`)
+    .join('');
+  return `<div class="sf-desk" aria-hidden="true">
+    <aside class="sf-desk__side"><div class="sf-desk__brand">SugamFlow</div>${side}</aside>
+    <div class="sf-desk__main">
+      <div class="sf-desk__top">${tabs}</div>
+      <div class="sf-desk__screen">
+        <h3>${escapeHtml(desk.screen.title)}</h3>
+        <p>${escapeHtml(desk.screen.subtitle)}</p>
+        <div class="sf-desk__kpis">${kpis}</div>
+        <div class="sf-desk__table"><div><span>Row</span><span>Status</span><span>Note</span><span>Value</span></div>${rows}</div>
+      </div>
+    </div>
+  </div>
+  <p class="sf-desk-note">Workspace preview uses the real sidebar labels. Sample figures only.</p>`;
+}
+
+const INDUSTRY_PAGES = {
+  '/retail': { id: 'retail' },
+  '/grocery': {
+    id: 'retail',
+    note: 'Grocery uses the same retail catalog, billing and stock desks — not a separate supermarket engine.'
+  },
+  '/electronics': {
+    id: 'retail',
+    note: 'Electronics uses the retail stack. The owner dashboard can load electronics AI insights where enabled — assistive summaries, not a sales forecast.'
+  },
+  '/pharmacy-software': { id: 'pharmacy' },
+  '/medical-shop': {
+    id: 'pharmacy',
+    note: 'Medical shop is the MEDICAL type: same pharmacy desks with medical-shop catalog wording.'
+  },
+  '/polyclinic': { id: 'clinic' },
+  '/doctor-opd': {
+    id: 'clinic',
+    note: 'Doctor OPD is the consultation desk (today board, Rx, referrals). Reception and visit billing sit on the same clinic tenant.'
+  },
+  '/pathology-lab': { id: 'laboratory' },
+  '/school-management': { id: 'school' },
+  '/features': { id: 'platform' }
+};
+
+function renderIndustryMain(industry, note) {
+  const chips = (industry.chips || [])
+    .map((chip) => `<span class="sf-chip">${escapeHtml(chip)}</span>`)
+    .join('');
+  const feats = (industry.features || [])
+    .map(
+      (feat) => `<article class="sf-feat"><span class="sf-feat__label">${escapeHtml(feat.label)}</span><h4>${escapeHtml(feat.title)}</h4><p>${escapeHtml(feat.text)}</p></article>`
+    )
+    .join('');
+  const steps = (industry.workflow || [])
+    .map((step) => `<li>${escapeHtml(step)}</li>`)
+    .join('');
+  const noteHtml = note ? `<p class="sf-explorer__lede">${escapeHtml(note)}</p>` : '';
+  const desk = desks.modules.find((row) => row.id === INDUSTRY_DESK[industry.id]);
+  return `<div class="sf-wrap" style="padding-bottom:3rem">
+    ${noteHtml}
+    ${workspaceHtml(desk)}
+    <div class="sf-chips" style="justify-content:flex-start;margin:0 0 1.2rem">${chips}</div>
+    <div class="sf-feat-grid">${feats}</div>
+    <div class="sf-flow"><p class="sf-flow__label">How it flows</p><ol class="sf-flow__list">${steps}</ol></div>
+    <p><a class="sf-more" href="/about#industry-${escapeHtml(industry.id)}">See this vertical on About →</a></p>
+  </div>`;
+}
+
+function renderPlatformMain() {
+  const feats = (inventory.platform || [])
+    .map(
+      (feat) => `<article class="sf-feat"><span class="sf-feat__label">${escapeHtml(feat.label)}</span><h4>${escapeHtml(feat.title)}</h4><p>${escapeHtml(feat.text)}</p></article>`
+    )
+    .join('');
+  const verticals = (inventory.industries || [])
+    .map(
+      (row) => `<a class="sf-card" href="${escapeHtml(row.href)}"><span class="sf-ico">${escapeHtml(row.ico || '')}</span><h3>${escapeHtml(row.name)}</h3><p>${escapeHtml(row.headline)}</p></a>`
+    )
+    .join('');
+  const wholesale = inventory.industries.find((row) => row.id === 'wholesale');
+  const wholesaleBlock = wholesale ? renderIndustryMain(wholesale, 'Wholesale is a capability pack on the same workspace — there is no separate public /wholesale URL.') : '';
+  return `<div class="sf-wrap" style="padding-bottom:2rem">
+    <h2>Platform capabilities</h2>
+    <div class="sf-feat-grid sf-feat-grid--4" style="margin-top:1rem">${feats}</div>
+    <h2>Vertical desks</h2>
+    <div class="sf-grid sf-grid-3" style="margin:1rem 0 2rem">${verticals}</div>
+  </div>${wholesaleBlock}`;
+}
+
+function chromeFooter() {
+  return `<footer class="sf-footer">
+    <div class="sf-wrap sf-footer__grid">
+      <div>
+        <img src="/assets/branding/sugamflow-logo.png" alt="SugamFlow" width="120" height="32">
+        <p>One Flow. Every Business. Cloud software for Indian retail, healthcare and schools.</p>
+      </div>
+      <div><h3>Product</h3><a href="/features">Features</a><a href="/billing">Billing</a><a href="/inventory">Inventory</a><a href="/pricing">Pricing</a></div>
+      <div><h3>Solutions</h3><a href="/medical-shop">Medical shop</a><a href="/pathology-lab">Pathology</a><a href="/polyclinic">Polyclinic</a><a href="/school-management">School</a></div>
+      <div><h3>Company</h3><a href="/about">About</a><a href="/contact">Contact</a><a href="/careers">Careers</a><a href="/login">Sign in</a></div>
+    </div>
+    <div class="sf-wrap sf-copy"><span>© 2026 SugamFlow</span><span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/security">Security</a></span></div>
+  </footer>
+  <script src="/assets/branding/public-site.js" defer></script>`;
+}
+
 function renderPage(page) {
   const related = [...(catalog.defaultRelated || []), ...(page.related || [])];
   const seen = new Set();
@@ -99,11 +320,11 @@ function renderPage(page) {
       const bullets = section.bullets?.length
         ? `<ul>${section.bullets.map((b) => `<li>${escapeHtml(b)}</li>`).join('')}</ul>`
         : '';
-      return `${h2}${paras}${bullets}`;
+      return `<article class="sf-card sf-card--plain">${h2}${paras}${bullets}</article>`;
     })
     .join('');
   const faq = page.faq?.length
-    ? `<section><h2>Questions</h2>${page.faq
+    ? `<section class="sf-card sf-card--plain"><h2>Questions</h2>${page.faq
         .map(
           (item) =>
             `<h3>${escapeHtml(item.question)}</h3><p>${escapeHtml(item.answer)}</p>`
@@ -111,6 +332,37 @@ function renderPage(page) {
         .join('')}</section>`
     : '';
   const soon = page.comingSoon ? '<p class="sf-soon">Coming Soon</p>' : '';
+  const mapped = INDUSTRY_PAGES[page.path];
+  let mainInner = `<main class="sf-article">
+    ${sections}
+    ${faq}
+    <nav class="sf-related" aria-label="Related pages">
+      <h2>Related pages</h2>
+      <ul>${links.map((link) => `<li><a href="${escapeHtml(link.path)}">${escapeHtml(link.label)}</a></li>`).join('')}</ul>
+    </nav>
+    <p>Official website: <a href="${origin}/">SugamFlow</a></p>
+    <p class="sf-updated">Last updated ${escapeHtml(page.updated)}</p>
+  </main>`;
+  let heroLead = page.lead;
+  let heroKicker = 'SUGAMFLOW';
+  if (mapped?.id === 'platform') {
+    heroKicker = 'PRODUCT';
+    heroLead = 'Capabilities confirmed in the signed-in workspace — not a generic SaaS checklist.';
+    mainInner = `${renderPlatformMain()}
+    <main class="sf-article">${faq}
+    <nav class="sf-related" aria-label="Related pages"><h2>Related pages</h2><ul>${links.map((link) => `<li><a href="${escapeHtml(link.path)}">${escapeHtml(link.label)}</a></li>`).join('')}</ul></nav></main>`;
+  } else if (mapped?.id) {
+    const industry = inventory.industries.find((row) => row.id === mapped.id);
+    if (industry) {
+      heroKicker = industry.kicker;
+      heroLead = industry.description;
+      mainInner = `${renderIndustryMain(industry, mapped.note)}
+      <main class="sf-article">
+        <nav class="sf-related" aria-label="Related pages"><h2>Related pages</h2><ul>${links.map((link) => `<li><a href="${escapeHtml(link.path)}">${escapeHtml(link.label)}</a></li>`).join('')}</ul></nav>
+        <p class="sf-updated">Last updated ${escapeHtml(page.updated)}</p>
+      </main>`;
+    }
+  }
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -129,64 +381,85 @@ function renderPage(page) {
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="${escapeHtml(page.title)}">
   <meta name="twitter:description" content="${escapeHtml(page.description)}">
-  <link rel="icon" href="/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/branding/public-site.css">
+  ${chromeHead()}
   <script type="application/ld+json">${JSON.stringify(jsonLd(page))}</script>
 </head>
 <body>
-  <header class="sf-header">
-    <div class="sf-container sf-header__inner">
-      <a class="sf-brand" href="/" aria-label="SugamFlow home"><img src="/assets/branding/sugamflow-logo.png" alt="SugamFlow logo" width="140" height="36"></a>
-      <nav class="sf-nav" aria-label="Main navigation">
-        <a href="/features">Features</a>
-        <a href="/pricing">Pricing</a>
-        <a href="/faq">FAQ</a>
-        <a href="/docs">Docs</a>
-        <a href="/contact">Contact</a>
-      </nav>
-      <div class="sf-header__actions">
-        <a class="sf-btn sf-btn--ghost sf-btn--sm" href="/login">Sign in</a>
-        <a class="sf-btn sf-btn--primary sf-btn--sm" href="mailto:career@sugamflow.com?subject=SugamFlow%20demo%20request">Book a demo</a>
-      </div>
+  ${chromeNav(page.path)}
+  <section class="sf-page-hero sf-page-hero--wide">
+    <div class="sf-wrap">
+      ${soon}
+      <p class="sf-kicker">${escapeHtml(heroKicker)}</p>
+      <h1>${escapeHtml(mapped?.id && inventory.industries.find((row) => row.id === mapped.id) ? inventory.industries.find((row) => row.id === mapped.id).headline : page.h1)}</h1>
+      <p>${escapeHtml(heroLead)}</p>
     </div>
-  </header>
-  <main class="sf-article">
-    <p class="kicker">SugamFlow</p>
-    ${soon}
-    <h1>${escapeHtml(page.h1)}</h1>
-    <p class="lead">${escapeHtml(page.lead)}</p>
-    ${sections}
-    ${faq}
-    <nav class="sf-related" aria-label="Related pages">
-      <h2>Related pages</h2>
-      <ul>${links.map((link) => `<li><a href="${escapeHtml(link.path)}">${escapeHtml(link.label)}</a></li>`).join('')}</ul>
-    </nav>
-    <p>Official website: <a href="${origin}/">SugamFlow</a></p>
-    <p class="sf-updated">Last updated ${escapeHtml(page.updated)}</p>
-  </main>
-  <footer class="sf-footer">
-    <div class="sf-container sf-footer__bottom">
-      <span>© 2026 SugamFlow</span>
-      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/security">Security</a> · <a href="/sugamflow">What is SugamFlow</a></span>
-    </div>
-  </footer>
+  </section>
+  ${mainInner}
+  ${chromeFooter()}
 </body>
 </html>
 `;
 }
 
+const skipCustom = new Set(['/about', '/contact', '/pricing', '/careers', '/modules']);
 for (const page of catalog.pages) {
+  if (skipCustom.has(page.path)) {
+    continue;
+  }
   const file = join(outDir, page.path.replace(/^\//, ''), 'index.html');
   mkdirSync(dirname(file), { recursive: true });
   writeFileSync(file, renderPage(page));
 }
 
+for (const mod of desks.modules) {
+  const feats = (mod.features || [])
+    .map(
+      (feat) => `<article class="sf-feat"><span class="sf-feat__label">${escapeHtml(mod.name)}</span><h4>${escapeHtml(feat.title)}</h4><p>${escapeHtml(feat.text)}</p></article>`
+    )
+    .join('');
+  const html = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>${escapeHtml(mod.name)} | SugamFlow module</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="${escapeHtml(mod.summary)}">
+  <link rel="canonical" href="${origin}/modules/${mod.id}">
+  ${chromeHead()}
+</head>
+<body>
+  ${chromeNav('/modules')}
+  <section class="sf-page-hero sf-page-hero--wide">
+    <div class="sf-wrap">
+      <p class="sf-kicker">MODULE</p>
+      <h1>${escapeHtml(mod.name)}</h1>
+      <p>${escapeHtml(mod.summary)}</p>
+    </div>
+  </section>
+  <div class="sf-wrap" style="padding-bottom:3rem">
+    <div data-sf-desk data-desk-id="${escapeHtml(mod.id)}"></div>
+    <div class="sf-feat-grid" style="margin-top:1.4rem">${feats}</div>
+    <p><a class="sf-more" href="/modules">All modules →</a></p>
+  </div>
+  ${chromeFooter()}
+  <script src="/assets/branding/product-desks.js" defer></script>
+  <script src="/assets/branding/desk-page.js" defer></script>
+</body>
+</html>`;
+  const file = join(outDir, 'modules', mod.id, 'index.html');
+  mkdirSync(dirname(file), { recursive: true });
+  writeFileSync(file, html);
+}
+
 const sitemapUrls = [
   { loc: `${origin}/`, changefreq: 'weekly', priority: '1.0' },
   { loc: `${origin}/careers`, changefreq: 'weekly', priority: '0.6' },
+  { loc: `${origin}/modules`, changefreq: 'weekly', priority: '0.8' },
+  ...desks.modules.map((mod) => ({
+    loc: `${origin}/modules/${mod.id}`,
+    changefreq: 'weekly',
+    priority: '0.7'
+  })),
   ...catalog.pages
     .filter((page) => page.sitemap !== false)
     .map((page) => ({

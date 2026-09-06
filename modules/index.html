@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SugamFlow modules | Billing, stock, clinic, lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Open each SugamFlow module to see the signed-in sidebar and main screen. Only desks that exist in the product.">
+  <link rel="canonical" href="https://sugamflow.com/modules">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/branding/public-site.css">
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+  <header class="sf-header" data-sf-header>
+    <div class="sf-header__bar">
+      <a class="sf-brand" href="/" aria-label="SugamFlow home">
+        <img src="/assets/branding/sugamflow-logo.png" alt="" width="34" height="34">
+        <span class="sf-brand__meta"><span class="sf-brand__name">SugamFlow</span><span class="sf-brand__tag">One Flow. Every Business.</span></span>
+      </a>
+      <nav class="sf-nav" aria-label="Primary">
+        <a href="/features">Products</a>
+        <a class="is-active" href="/modules">Modules</a>
+        <a href="/about">About</a>
+        <a href="/pricing">Pricing</a>
+      </nav>
+      <button class="sf-menu-btn" type="button" data-sf-menu aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <div class="sf-header__cta">
+        <a class="sf-btn sf-btn--ghost" href="/login">Sign in</a>
+        <a class="sf-btn sf-btn--primary" href="/register">Get Started</a>
+      </div>
+    </div>
+  </header>
+  <div class="sf-drawer" data-sf-drawer>
+    <a href="/modules">Modules</a>
+    <a href="/about">About</a>
+    <a class="sf-btn sf-btn--primary" href="/register">Get Started</a>
+  </div>
+  <main>
+    <section class="sf-page-hero sf-page-hero--wide">
+      <div class="sf-wrap">
+        <p class="sf-kicker">MODULES</p>
+        <h1>From the counter to compliance.</h1>
+        <p>Click a box. You get the sidebar labels from the signed-in app, the main screen layout, and the features that actually exist.</p>
+      </div>
+    </section>
+    <section class="sf-section">
+      <div class="sf-wrap">
+        <div class="sf-grid sf-grid-3 sf-mod-grid" data-sf-modules>
+          <a class="sf-card" href="/modules/billing"><span class="sf-ico">BL</span><h3>Billing &amp; POS</h3><p>Checkout, dues, GST, printable invoices.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/inventory"><span class="sf-ico">IN</span><h3>Inventory &amp; warehouse</h3><p>Batches, expiry, transfers, rack/bin.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/purchase"><span class="sf-ico">PO</span><h3>Purchase &amp; procurement</h3><p>PO, GRN, suppliers, OCR drafts.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/finance"><span class="sf-ico">FN</span><h3>Finance &amp; credit</h3><p>Ledger, collections, ageing.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/gst"><span class="sf-ico">GST</span><h3>GST &amp; compliance</h3><p>GSTR summary and recon.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/clinic"><span class="sf-ico">CL</span><h3>Clinic workflows</h3><p>Reception, doctor queue, e-Rx.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/school"><span class="sf-ico">SC</span><h3>School campus</h3><p>Tenant and login — not shop fees.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/staff"><span class="sf-ico">ST</span><h3>Staff &amp; roles</h3><p>Invite staff. Role templates.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/parties"><span class="sf-ico">PT</span><h3>Customers &amp; parties</h3><p>Customers, patients, buyers.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/wholesale"><span class="sf-ico">WS</span><h3>Wholesale</h3><p>Dayboard, challan, collections.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/laboratory"><span class="sf-ico">LB</span><h3>Pathology laboratory</h3><p>Booking, worklist, private reports.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/reports"><span class="sf-ico">RP</span><h3>Reports</h3><p>Report centre catalogue.</p><span class="sf-more">Open desk →</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="sf-footer">
+    <div class="sf-wrap sf-copy"><span>© 2026 SugamFlow</span><span><a href="/privacy">Privacy</a></span></div>
+  </footer>
+  <script src="/assets/branding/public-site.js" defer></script>
+  <script src="/assets/branding/product-desks.js" defer></script>
+  <script src="/assets/branding/desk-page.js" defer></script>
+</body>
+</html>

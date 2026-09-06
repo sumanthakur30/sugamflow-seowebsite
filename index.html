@@ -2,245 +2,312 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>SugamFlow | Business &amp; Healthcare Management Software</title>
+  <title>SugamFlow | One Flow. Every Business.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SugamFlow helps medical shops, pharmacies, pathology labs, doctors, polyclinics, retail businesses and other organizations manage billing, inventory, payments, customers and operations.">
+  <meta name="description" content="SugamFlow brings billing, GST, inventory and operations for retail, wholesale, healthcare, pharmacy, laboratories and schools into one secure cloud platform.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://sugamflow.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SugamFlow">
-  <meta property="og:title" content="SugamFlow | Business &amp; Healthcare Management Software">
-  <meta property="og:description" content="SugamFlow helps medical shops, pharmacies, pathology labs, doctors, polyclinics, retail businesses and other organizations manage billing, inventory, payments, customers and operations.">
+  <meta property="og:title" content="SugamFlow | One Flow. Every Business.">
+  <meta property="og:description" content="Run your business, your way — billing, inventory, GST and operations unified in one powerful platform.">
   <meta property="og:url" content="https://sugamflow.com/">
   <meta property="og:image" content="https://sugamflow.com/assets/branding/sugamflow-logo.png">
-  <meta name="twitter:card" content="summary">
-  <link rel="icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/branding/public-site.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://sugamflow.com/#organization","name":"SugamFlow","url":"https://sugamflow.com/","email":"career@sugamflow.com","logo":"https://sugamflow.com/assets/branding/sugamflow-logo.png"},{"@type":"WebSite","@id":"https://sugamflow.com/#website","url":"https://sugamflow.com/","name":"SugamFlow","publisher":{"@id":"https://sugamflow.com/#organization"}},{"@type":"SoftwareApplication","name":"SugamFlow","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://sugamflow.com/","description":"SaaS / Business Management Software / Healthcare Management Software for India.","provider":{"@id":"https://sugamflow.com/#organization"}}]}</script>
+  <link rel="icon" href="/favicon.ico">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://sugamflow.com/#organization","name":"SugamFlow","url":"https://sugamflow.com/","email":"career@sugamflow.com","logo":"https://sugamflow.com/assets/branding/sugamflow-logo.png"},{"@type":"WebSite","name":"SugamFlow","url":"https://sugamflow.com/"},{"@type":"SoftwareApplication","name":"SugamFlow","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://sugamflow.com/","description":"Cloud software for Indian businesses: billing, inventory, GST, pharmacy, clinic, laboratory and school operations.","provider":{"@id":"https://sugamflow.com/#organization"}}]}</script>
 </head>
-<body class="sf-landing">
-  <header class="sf-header">
-    <div class="sf-container sf-header__inner">
+<body>
+  <header class="sf-header" data-sf-header>
+    <div class="sf-header__bar">
       <a class="sf-brand" href="/" aria-label="SugamFlow home">
-        <img src="/assets/branding/sugamflow-logo.png" alt="SugamFlow logo" width="140" height="36">
+        <img src="/assets/branding/sugamflow-logo.png" alt="" width="34" height="34">
+        <span class="sf-brand__meta"><span class="sf-brand__name">SugamFlow</span><span class="sf-brand__tag">One Flow. Every Business.</span></span>
       </a>
-      <nav class="sf-nav" aria-label="Main navigation">
-        <a href="#industries">Industries</a>
-        <a href="#modules">Modules</a>
-        <a href="/features">Features</a>
+      <nav class="sf-nav" aria-label="Primary">
+        <details class="sf-drop"><summary>Products</summary>
+          <div class="sf-drop__menu">
+            <a href="/features">Features<small>What the platform does</small></a>
+            <a href="/billing">GST billing</a>
+            <a href="/inventory">Inventory</a>
+            <a href="/payments-software">Payments</a>
+            <a href="/ai">Assistive AI</a>
+          </div>
+        </details>
+        <details class="sf-drop"><summary>Solutions</summary>
+          <div class="sf-drop__menu">
+            <a href="/medical-shop">Medical shop</a>
+            <a href="/pathology-lab">Pathology lab</a>
+            <a href="/doctor-opd">Doctor OPD</a>
+            <a href="/polyclinic">Polyclinic</a>
+            <a href="/school-management">School ERP</a>
+          </div>
+        </details>
+        <details class="sf-drop"><summary>Industries</summary>
+          <div class="sf-drop__menu">
+            <a href="/retail">Retail</a>
+            <a href="/pharmacy-software">Pharmacy</a>
+            <a href="/grocery">Grocery</a>
+            <a href="/electronics">Electronics</a>
+            <a href="/restaurant">Restaurant</a>
+          </div>
+        </details>
+        <details class="sf-drop"><summary>Resources</summary>
+          <div class="sf-drop__menu">
+            <a href="/docs">Documentation</a>
+            <a href="/faq">FAQ</a>
+            <a href="/blog">Knowledge centre</a>
+            <a href="/security">Security</a>
+          </div>
+        </details>
+        <a href="/modules">Modules</a>
         <a href="/pricing">Pricing</a>
-        <a href="/faq">FAQ</a>
-        <a href="/docs">Docs</a>
         <a href="/about">About</a>
       </nav>
-      <div class="sf-header__actions">
-        <a class="sf-btn sf-btn--ghost sf-btn--sm" href="/login">Sign in</a>
-        <a class="sf-btn sf-btn--primary sf-btn--sm" href="mailto:career@sugamflow.com?subject=SugamFlow%20demo%20request">Book a demo</a>
+      <button class="sf-menu-btn" type="button" data-sf-menu aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <div class="sf-header__cta">
+        <a class="sf-btn sf-btn--ghost" href="/login">Sign in</a>
+        <a class="sf-btn sf-btn--primary" href="/register">Get Started</a>
       </div>
     </div>
   </header>
+  <div class="sf-drawer" data-sf-drawer>
+    <a href="/features">Products</a>
+    <a href="/medical-shop">Solutions</a>
+    <a href="/retail">Industries</a>
+    <a href="/modules">Modules</a>
+    <a href="/docs">Resources</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a class="sf-btn sf-btn--primary" href="/register">Get Started</a>
+  </div>
 
   <main>
     <section class="sf-hero">
-      <div class="sf-container sf-hero__grid">
+      <div class="sf-wrap sf-hero__grid">
         <div>
-          <div class="sf-pill">Software for Indian retail, wholesale, clinics &amp; schools</div>
-          <h1>One platform to run your entire business</h1>
-          <p class="sf-hero__sub">SugamFlow is a SaaS platform designed to help businesses manage operations, billing, inventory, payments, customers, suppliers and reporting. SugamFlow supports medical shops/pharmacies, pathology labs, doctors/OPD, polyclinics, retail and other configurable businesses.</p>
-          <div class="sf-hero__cta">
-            <a class="sf-btn sf-btn--primary sf-btn--lg" href="mailto:career@sugamflow.com?subject=SugamFlow%20demo%20request">Book a demo</a>
-            <a class="sf-btn sf-btn--outline sf-btn--lg" href="/register">Start free trial</a>
+          <p class="sf-kicker">BUILT FOR MODERN INDIAN BUSINESSES</p>
+          <h1>One Flow.<br><em>Every Business.</em></h1>
+          <p class="sf-lede">Billing, GST, inventory and operations — finally working together. Retail, wholesale, pharmacy, clinic and laboratory desks share one login. School tenants use the same identity — campus fee desks are not the shop POS.</p>
+          <div class="sf-hero__actions">
+            <a class="sf-btn sf-btn--primary" href="/register">Get Started</a>
+            <a class="sf-btn sf-btn--ghost" href="#how">See How It Works</a>
           </div>
-          <p class="sf-hero__note">Demo takes under a minute — GST, plan, and full setup come later at registration.</p>
-          <div class="sf-hero__trust">
-            <span>GST-ready billing</span>
-            <span>Multi-branch ready</span>
-            <span>Multi-user · multi-role</span>
-            <span>India-first workflows</span>
+          <div class="sf-checks">
+            <span>Multi-tenant</span>
+            <span>Role-based access</span>
+            <span>GST-ready</span>
+            <span>Cloud workspace</span>
           </div>
         </div>
-        <div class="sf-hero__visual" aria-hidden="true">
-          <div class="sf-mock">
-            <div class="sf-mock__chrome"><span></span><span></span><span></span></div>
-            <div class="sf-mock__body">
-              <div class="sf-mock__sidebar"></div>
-              <div class="sf-mock__main">
-                <div class="sf-mock__kpis">
-                  <div class="sf-mock__kpi"><small>Revenue</small><strong>₹2.4L</strong></div>
-                  <div class="sf-mock__kpi"><small>Orders</small><strong>186</strong></div>
-                  <div class="sf-mock__kpi"><small>Stock alerts</small><strong>7</strong></div>
-                </div>
-                <div class="sf-mock__chart">
-                  <div class="sf-mock__bar" style="height:45%"></div>
-                  <div class="sf-mock__bar" style="height:72%"></div>
-                  <div class="sf-mock__bar" style="height:58%"></div>
-                  <div class="sf-mock__bar" style="height:88%"></div>
-                  <div class="sf-mock__bar" style="height:65%"></div>
-                  <div class="sf-mock__bar" style="height:92%"></div>
-                </div>
+        <div class="sf-dash" aria-hidden="true">
+          <div class="sf-dash__top"><i></i><i></i><i></i></div>
+          <div class="sf-dash__body">
+            <aside class="sf-dash__side"><div class="sf-dash__dot is-on"></div><div class="sf-dash__dot"></div><div class="sf-dash__dot"></div><div class="sf-dash__dot"></div></aside>
+            <div class="sf-dash__main">
+              <div class="sf-kpis">
+                <div class="sf-kpi"><small>Today sales</small><strong>₹2.48L</strong></div>
+                <div class="sf-kpi"><small>Orders</small><strong>186</strong></div>
+                <div class="sf-kpi"><small>Due</small><strong>₹41,200</strong></div>
+              </div>
+              <div class="sf-chart">
+                <b style="height:42%"></b><b style="height:58%"></b><b style="height:49%"></b><b style="height:76%"></b><b style="height:63%"></b><b style="height:88%"></b><b style="height:71%"></b>
               </div>
             </div>
           </div>
-          <div class="sf-float-card sf-float-card--1"><small>Today's sales</small><strong>+32%</strong></div>
-          <div class="sf-float-card sf-float-card--2"><small>Lab reports</small><strong>24 ready</strong></div>
+          <div class="sf-float sf-float--1"><small>GST</small>Invoice generated</div>
+          <div class="sf-float sf-float--2"><small>Stock</small>Updated · 48 units</div>
+          <div class="sf-float sf-float--3"><small>Payment</small>Received · UPI</div>
+          <div class="sf-float sf-float--4"><small>Clinic</small>Appointment booked</div>
         </div>
       </div>
     </section>
 
-    <section class="sf-stats" aria-label="Platform scale">
-      <div class="sf-container sf-stats__grid">
-        <article class="sf-stat-card"><div class="sf-stat-card__value">4</div><div class="sf-stat-card__label">Core verticals</div><div class="sf-stat-card__detail">Retail · Wholesale · Clinic · School</div></article>
-        <article class="sf-stat-card"><div class="sf-stat-card__value">1</div><div class="sf-stat-card__label">Unified platform</div><div class="sf-stat-card__detail">Billing to compliance</div></article>
-        <article class="sf-stat-card"><div class="sf-stat-card__value">RBAC</div><div class="sf-stat-card__label">Team access</div><div class="sf-stat-card__detail">Multi-user · multi-role</div></article>
-        <article class="sf-stat-card"><div class="sf-stat-card__value">GST</div><div class="sf-stat-card__label">India-ready</div><div class="sf-stat-card__detail">e-Invoice · e-Way · reports</div></article>
+    <section class="sf-strip">
+      <div class="sf-wrap">
+        <p class="sf-strip__title">One platform. Multiple workflows. One source of truth.</p>
+        <div class="sf-chips">
+          <span class="sf-chip">Billing</span>
+          <span class="sf-chip">GST</span>
+          <span class="sf-chip">Inventory</span>
+          <span class="sf-chip">Pharmacy</span>
+          <span class="sf-chip">Clinic</span>
+          <span class="sf-chip">Laboratory</span>
+          <span class="sf-chip">Wholesale</span>
+        </div>
       </div>
     </section>
 
-    <section class="sf-section" id="industries">
-      <div class="sf-container">
-        <header class="sf-section__head">
-          <p class="sf-eyebrow">Built for your industry</p>
-          <h2>Four verticals. One SugamFlow.</h2>
-          <p class="sf-section__lead">Purpose-built flows for retail/pharmacy, wholesale depots, polyclinics, and schools — without stitching five different softwares together.</p>
+    <section class="sf-section sf-section--paper" id="industries">
+      <div class="sf-wrap">
+        <header class="sf-head" data-reveal>
+          <p class="sf-kicker">BUILT FOR THE WAY YOU WORK</p>
+          <h2>Multiple businesses. One platform.</h2>
+          <p>Cards come from the same product inventory as About — only desks that exist in the application.</p>
         </header>
-        <div class="sf-industry-grid sf-industry-grid--focus">
-          <a class="sf-industry-card" href="/retail">
-            <span class="sf-card-icon">RT</span>
-            <h3>Retail &amp; Pharmacy</h3>
-            <p>POS billing, catalog, batch stock, dues, and GST invoices for daily counter sales.</p>
-            <ul class="sf-industry-card__features"><li>GST billing &amp; print</li><li>Batch · expiry · FEFO</li><li>PO / GRN · dues</li></ul>
-            <span class="sf-link-btn">Read retail overview</span>
-          </a>
-          <a class="sf-industry-card" href="/medical-shop">
-            <span class="sf-card-icon">MD</span>
-            <h3>Medical shop</h3>
-            <p>Medicine catalog, purchase, expiry-oriented stock, and GST collection in one workspace.</p>
-            <ul class="sf-industry-card__features"><li>Batches &amp; expiry</li><li>Suppliers &amp; GRN</li><li>Split payment</li></ul>
-            <span class="sf-link-btn">Read medical shop overview</span>
-          </a>
-          <a class="sf-industry-card" href="/polyclinic">
-            <span class="sf-card-icon">OP</span>
-            <h3>Polyclinic &amp; Care</h3>
-            <p>Reception, queue, doctor e-Rx, pharmacy, lab, and IPD in one care flow.</p>
-            <ul class="sf-industry-card__features"><li>OPD queue &amp; visit</li><li>e-Prescription</li><li>Pharmacy · lab · IPD</li></ul>
-            <span class="sf-link-btn">Read polyclinic overview</span>
-          </a>
-          <a class="sf-industry-card" href="/school-management">
-            <span class="sf-card-icon">SC</span>
-            <h3>School ERP</h3>
-            <p>Campus operations from admission to fees, attendance, exams, and parent updates.</p>
-            <ul class="sf-industry-card__features"><li>Admission · fees</li><li>Attendance</li><li>Hostel · transport</li></ul>
-            <span class="sf-link-btn">Read school overview</span>
-          </a>
+        <div class="sf-grid sf-grid-3" data-sf-home-industries>
+          <a class="sf-card" href="/retail"><span class="sf-ico">RT</span><h3>Retail &amp; counter</h3><p>Sell smarter. Track every item.</p><span class="sf-more">Explore retail →</span></a>
+          <a class="sf-card" href="/pharmacy-software"><span class="sf-ico">PH</span><h3>Pharmacy / medical store</h3><p>From the batch to the bill.</p><span class="sf-more">Explore pharmacy →</span></a>
+          <a class="sf-card" href="/modules/wholesale"><span class="sf-ico">WS</span><h3>Wholesale &amp; distribution</h3><p>Sale, challan, invoice and credit.</p><span class="sf-more">Open wholesale desk →</span></a>
+          <a class="sf-card" href="/polyclinic"><span class="sf-ico">CL</span><h3>Clinics &amp; polyclinics</h3><p>Less paperwork. More time for patients.</p><span class="sf-more">Explore clinic →</span></a>
+          <a class="sf-card" href="/pathology-lab"><span class="sf-ico">LB</span><h3>Pathology / laboratory</h3><p>From booking to report.</p><span class="sf-more">Explore laboratory →</span></a>
+          <a class="sf-card" href="/modules/school"><span class="sf-ico">SC</span><h3>Schools</h3><p>Same login. Not the shop POS.</p><span class="sf-more">Open school page →</span></a>
         </div>
-        <p class="sf-more-industries">
-          Also:
-          <a href="/pathology-lab">Pathology lab</a> ·
-          <a href="/doctor-opd">Doctor OPD</a> ·
-          <a href="/pharmacy-software">Pharmacy</a> ·
-          <a href="/grocery">Grocery</a> ·
-          <a href="/electronics">Electronics</a> ·
-          <a href="/restaurant">Restaurant</a> (Coming Soon)
-        </p>
+        <p class="sf-head" style="margin-top:2.2rem"><strong>Also shipped</strong></p>
+        <div class="sf-grid sf-grid-3" data-sf-also></div>
       </div>
     </section>
 
-    <section class="sf-section sf-section--muted" id="modules">
-      <div class="sf-container">
-        <header class="sf-section__head">
-          <p class="sf-eyebrow">Platform modules</p>
-          <h2>Operations software, not another spreadsheet</h2>
-          <p class="sf-section__lead">From the counter to compliance — modules that match how Indian businesses actually work.</p>
+    <section class="sf-section" id="modules">
+      <div class="sf-wrap">
+        <header class="sf-head" data-reveal>
+          <p class="sf-kicker">MODULES</p>
+          <h2>From the counter to compliance.</h2>
+          <p>Each box opens the real sidebar and main screen for that desk. School and e-Invoice are labelled as they actually ship.</p>
         </header>
-        <div class="sf-module-grid">
-          <a class="sf-module-card" href="/billing"><span class="sf-card-icon">BL</span><h3>Billing &amp; POS</h3><p>Fast checkout, partial payments, dues, GST, and printable invoices.</p></a>
-          <a class="sf-module-card" href="/inventory"><span class="sf-card-icon">ST</span><h3>Inventory &amp; warehouse</h3><p>Batches, expiry, transfers, rack/bin, barcode labels, stock intelligence.</p></a>
-          <a class="sf-module-card" href="/payments-software"><span class="sf-card-icon">PY</span><h3>Payments</h3><p>Cash, online, dues, and split collection on supported bills.</p></a>
-          <a class="sf-module-card" href="/business-reports"><span class="sf-card-icon">RP</span><h3>Reports</h3><p>Owner dashboards, sales analysis, and operational report centre after sign-in.</p></a>
-          <a class="sf-module-card" href="/pathology-lab"><span class="sf-card-icon">LB</span><h3>Pathology lab</h3><p>Booking, accession, worklists, and a private OTP report portal.</p></a>
-          <a class="sf-module-card" href="/ai"><span class="sf-card-icon">AI</span><h3>Assistive AI</h3><p>Product capture and PO OCR drafts — humans review before records change.</p></a>
+        <div class="sf-grid sf-grid-3 sf-mod-grid" data-sf-modules>
+          <a class="sf-card" href="/modules/billing"><span class="sf-ico">BL</span><h3>Billing &amp; POS</h3><p>Checkout, dues, GST, printable invoices.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/inventory"><span class="sf-ico">IN</span><h3>Inventory &amp; warehouse</h3><p>Batches, expiry, transfers, rack/bin.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/purchase"><span class="sf-ico">PO</span><h3>Purchase &amp; procurement</h3><p>PO, GRN, suppliers, OCR drafts.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/finance"><span class="sf-ico">FN</span><h3>Finance &amp; credit</h3><p>Ledger, collections, ageing.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/gst"><span class="sf-ico">GST</span><h3>GST &amp; compliance</h3><p>GSTR summary and recon. e-Invoice when configured.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/clinic"><span class="sf-ico">CL</span><h3>Clinic workflows</h3><p>Reception, doctor queue, e-Rx.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/school"><span class="sf-ico">SC</span><h3>School campus</h3><p>Tenant and login — not shop fees.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/staff"><span class="sf-ico">ST</span><h3>Staff &amp; roles</h3><p>Invite staff. Role templates.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/parties"><span class="sf-ico">PT</span><h3>Customers &amp; parties</h3><p>Customers, patients, buyers.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/wholesale"><span class="sf-ico">WS</span><h3>Wholesale</h3><p>Dayboard, challan, collections.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/laboratory"><span class="sf-ico">LB</span><h3>Pathology laboratory</h3><p>Booking, worklist, private reports.</p><span class="sf-more">Open desk →</span></a>
+          <a class="sf-card" href="/modules/reports"><span class="sf-ico">RP</span><h3>Reports</h3><p>Report centre catalogue.</p><span class="sf-more">Open desk →</span></a>
         </div>
       </div>
     </section>
 
-    <section class="sf-section" id="compare">
-      <div class="sf-container">
-        <header class="sf-section__head">
-          <p class="sf-eyebrow">Why SugamFlow</p>
-          <h2>Built like modern SaaS. Tuned for Indian ops.</h2>
+    <section class="sf-section sf-section--paper" id="dashboards">
+      <div class="sf-wrap">
+        <header class="sf-head" data-reveal>
+          <p class="sf-kicker">PRODUCT PREVIEW</p>
+          <h2>Dashboards for the roles that exist in the app.</h2>
+          <p>Owner, wholesale, doctor, inventory and reports. There is no school-admin dashboard in shop-management-ui.</p>
         </header>
-        <div class="sf-compare-wrap">
-          <table class="sf-compare">
-            <thead>
-              <tr><th scope="col">Capability</th><th scope="col">Traditional / manual</th><th scope="col" class="sf-compare__highlight">SugamFlow</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">Platform</th><td>Multiple apps &amp; Excel</td><td class="sf-compare__highlight">One cloud workspace</td></tr>
-              <tr><th scope="row">Team access</th><td>Shared logins</td><td class="sf-compare__highlight">Multi-user · multi-role RBAC</td></tr>
-              <tr><th scope="row">Wholesale ops</th><td>Desktop silos</td><td class="sf-compare__highlight">Sale → challan → invoice + credit</td></tr>
-              <tr><th scope="row">Clinic + pharmacy</th><td>Disconnected counters</td><td class="sf-compare__highlight">Visit-linked care &amp; dispense</td></tr>
-              <tr><th scope="row">Multi-branch</th><td>Separate installs</td><td class="sf-compare__highlight">Tenant-wide control</td></tr>
-            </tbody>
-          </table>
+        <div class="sf-dash-pills" data-sf-dash-pills></div>
+        <div class="sf-dash-preview" data-sf-dash-preview></div>
+      </div>
+    </section>
+
+    <section class="sf-section" id="how">
+      <div class="sf-wrap">
+        <header class="sf-head" data-reveal>
+          <p class="sf-kicker">HOW SUGAMFLOW SIMPLIFIES WORK</p>
+          <h2>Everything your business needs. One connected platform.</h2>
+        </header>
+        <article class="sf-alt" data-reveal>
+          <div><h3>Sell faster</h3><p>GST-ready billing from the amount you actually collect. Print and PDF stay on the signed-in invoice desk.</p></div>
+          <div class="sf-panel" aria-hidden="true"><div class="sf-panel__row">INV-1842<b>₹12,480</b></div><div class="sf-panel__row">INV-1841<b>₹6,210</b></div><div class="sf-panel__row">INV-1840<b>₹980</b></div></div>
+        </article>
+        <article class="sf-alt sf-alt--flip" data-reveal>
+          <div><h3>Know your stock</h3><p>Batches, near-expiry views, transfers and GRN — drafts from OCR stay drafts until a person confirms.</p></div>
+          <div class="sf-panel" aria-hidden="true"><div class="sf-panel__row">Paracetamol 650<b>12 near expiry</b></div><div class="sf-panel__row">Amox 500<b>In stock</b></div><div class="sf-panel__row">ORS sachets<b>Low</b></div></div>
+        </article>
+        <article class="sf-alt" data-reveal>
+          <div><h3>Stay compliant</h3><p>GST lives in everyday billing. e-Invoice push only runs when a GSP is actually configured — no invented IRN numbers.</p></div>
+          <div class="sf-panel" aria-hidden="true"><div class="sf-panel__row">CGST / SGST<b>On the bill</b></div><div class="sf-panel__row">HSN on line<b>Required</b></div><div class="sf-panel__row">e-Invoice<b>When configured</b></div></div>
+        </article>
+        <article class="sf-alt sf-alt--flip" data-reveal>
+          <div><h3>Run every outlet</h3><p>Multiple shops under one tenant, with staff roles instead of a shared password.</p></div>
+          <div class="sf-panel" aria-hidden="true"><div class="sf-panel__row">Main counter<b>Live</b></div><div class="sf-panel__row">Warehouse<b>Live</b></div><div class="sf-panel__row">Clinic desk<b>Live</b></div></div>
+        </article>
+        <article class="sf-alt" data-reveal>
+          <div><h3>Keep teams connected</h3><p>Role-based access so cashiers, doctors and accountants open only the desks they need.</p></div>
+          <div class="sf-panel" aria-hidden="true"><div class="sf-panel__row">Owner<b>All desks</b></div><div class="sf-panel__row">Cashier<b>Billing</b></div><div class="sf-panel__row">Accountant<b>Reports</b></div></div>
+        </article>
+        <article class="sf-alt sf-alt--flip" data-reveal>
+          <div><h3>See the business clearly</h3><p>Dashboards and reports that stay inside your tenant after sign-in — not on this marketing site.</p></div>
+          <div class="sf-panel" aria-hidden="true"><div class="sf-panel__bars"><i style="height:48%"></i><i style="height:62%"></i><i style="height:41%"></i><i style="height:78%"></i><i style="height:66%"></i><i style="height:88%"></i></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sf-section sf-section--paper">
+      <div class="sf-wrap">
+        <header class="sf-head" data-reveal>
+          <p class="sf-kicker">ONE PLATFORM</p>
+          <h2>One hub. The workflows you already run.</h2>
+        </header>
+        <div class="sf-tree" data-reveal>
+          <div class="sf-tree__hub">SUGAMFLOW</div>
+          <div class="sf-tree__row">
+            <span>Billing</span><span>Inventory</span><span>GST</span><span>Operations</span>
+          </div>
+          <div class="sf-tree__row">
+            <span>Retail</span><span>Pharmacy</span><span>Clinic</span><span>Laboratory</span><span>Wholesale</span><span>School</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="sf-cta-band" id="contact">
-      <div class="sf-container sf-cta-band__inner">
-        <div>
-          <h2>Ready to see SugamFlow on your business?</h2>
-          <p>Book a short demo with minimum details. We collect GST, plans, and full setup only when you register for real.</p>
-        </div>
-        <div class="sf-cta-band__actions">
-          <a class="sf-btn sf-btn--white sf-btn--lg" href="mailto:career@sugamflow.com?subject=SugamFlow%20demo%20request">Book a demo</a>
-          <a class="sf-btn sf-btn--outline-white sf-btn--lg" href="/register">Start free trial</a>
-          <a class="sf-btn sf-btn--outline-white sf-btn--lg" href="/contact">Contact sales</a>
+    <section class="sf-section">
+      <div class="sf-wrap">
+        <header class="sf-head" data-reveal>
+          <p class="sf-kicker">PRODUCT</p>
+          <h2>A workspace that looks like the work.</h2>
+          <p>Sample figures are illustrative. Live numbers stay inside your tenant after sign-in.</p>
+        </header>
+        <div class="sf-show" data-reveal>
+          <div class="sf-show__bar"><strong>Owner overview</strong><span>Today · one tenant</span></div>
+          <div class="sf-show__metrics">
+            <div class="sf-metric"><small>Revenue</small><strong>₹2.48L</strong></div>
+            <div class="sf-metric"><small>Sales</small><strong>186 bills</strong></div>
+            <div class="sf-metric"><small>Inventory alerts</small><strong>7 near expiry</strong></div>
+            <div class="sf-metric"><small>Outstanding</small><strong>₹41,200</strong></div>
+          </div>
+          <div class="sf-show__grid">
+            <div class="sf-show__table">
+              <div><span>Outlet</span><span>Sales</span><span>GST</span></div>
+              <div><span>Main counter</span><span>₹1.12L</span><span>₹20,160</span></div>
+              <div><span>Warehouse</span><span>₹86,400</span><span>₹15,552</span></div>
+              <div><span>Clinic desk</span><span>₹49,800</span><span>₹8,964</span></div>
+            </div>
+            <div class="sf-show__note">
+              <strong>Customers &amp; dues</strong>
+              Ageing stays on the signed-in workspace. These figures are a visual sample, not live tenant data.
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <div class="sf-wrap">
+      <section class="sf-cta" data-reveal>
+        <h2>Ready to bring your business into one flow?</h2>
+        <p>Start a trial or write to the team. GST and full outlet setup come at registration — not on the first hello.</p>
+        <div class="sf-cta__row">
+          <a class="sf-btn sf-btn--primary" href="/register">Get Started with SugamFlow</a>
+          <a class="sf-btn sf-btn--line" href="/contact">Talk to us</a>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="sf-footer">
-    <div class="sf-container sf-footer__grid">
+    <div class="sf-wrap sf-footer__grid">
       <div>
-        <img class="sf-footer__logo" src="/assets/branding/sugamflow-logo.png" alt="SugamFlow" width="140" height="36">
-        <p>Cloud software for retail, wholesale, clinics, and schools across India. Official website: SugamFlow.</p>
+        <img src="/assets/branding/sugamflow-logo.png" alt="SugamFlow" width="120" height="32">
+        <p>One Flow. Every Business. Official website: SugamFlow.</p>
       </div>
-      <div>
-        <h3>Product</h3>
-        <a href="/features">Features</a>
-        <a href="/medical-shop">Medical shop</a>
-        <a href="/pathology-lab">Pathology lab</a>
-        <a href="/doctor-opd">Doctor OPD</a>
-        <a href="/polyclinic">Polyclinic</a>
-        <a href="/retail">Retail</a>
-        <a href="/school-management">School ERP</a>
-      </div>
-      <div>
-        <h3>Access</h3>
-        <a href="/register">Start free trial</a>
-        <a href="/login">Sign in</a>
-        <a href="/sugamflow">What is SugamFlow</a>
-        <a href="/blog">Knowledge centre</a>
-      </div>
-      <div>
-        <h3>Company</h3>
-        <a href="/pricing">Pricing</a>
-        <a href="/faq">FAQ</a>
-        <a href="/docs">Documentation</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="mailto:career@sugamflow.com">career@sugamflow.com</a>
-      </div>
+      <div><h3>Product</h3><a href="/features">Features</a><a href="/billing">Billing</a><a href="/inventory">Inventory</a><a href="/pricing">Pricing</a></div>
+      <div><h3>Solutions</h3><a href="/medical-shop">Medical shop</a><a href="/pathology-lab">Pathology</a><a href="/polyclinic">Polyclinic</a><a href="/school-management">School</a></div>
+      <div><h3>Company</h3><a href="/about">About</a><a href="/contact">Contact</a><a href="/careers">Careers</a><a href="/login">Sign in</a></div>
     </div>
-    <div class="sf-container sf-footer__bottom">
-      <span>© 2026 SugamFlow. All rights reserved.</span>
-      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/security">Security</a></span>
-    </div>
+    <div class="sf-wrap sf-copy"><span>© 2026 SugamFlow</span><span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/security">Security</a></span></div>
   </footer>
+  <script src="/assets/branding/public-site.js" defer></script>
+  <script src="/assets/branding/product-inventory.js" defer></script>
+  <script src="/assets/branding/home-page.js" defer></script>
+  <script src="/assets/branding/product-desks.js" defer></script>
+  <script src="/assets/branding/desk-page.js" defer></script>
 </body>
 </html>
