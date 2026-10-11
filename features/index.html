@@ -51,12 +51,16 @@
           </div>
         </details>
         <details class="sf-drop"><summary>Industries</summary>
-          <div class="sf-drop__menu">
+          <div class="sf-drop__menu" data-sf-industry-menu>
             <a href="/retail">Retail</a>
             <a href="/pharmacy-software">Pharmacy</a>
             <a href="/grocery">Grocery</a>
             <a href="/electronics">Electronics</a>
             <a href="/restaurant">Restaurant</a>
+            <a href="/automobile">Automobile</a>
+            <a href="/polyclinic">Clinics</a>
+            <a href="/pathology-lab">Laboratory</a>
+            <a href="/school-management">Schools</a>
           </div>
         </details>
         <details class="sf-drop"><summary>Resources</summary>
@@ -69,6 +73,7 @@
         </details>
         <a href="/modules">Modules</a>
         <a href="/pricing">Pricing</a>
+        <a href="/clients-partners">Clients</a>
         <a href="/about">About</a>
       </nav>
       <button class="sf-menu-btn" type="button" data-sf-menu aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
@@ -83,9 +88,11 @@
     <a href="/features">Products — Features</a>
     <a href="/medical-shop">Solutions — Medical shop</a>
     <a href="/retail">Industries — Retail</a>
+    <a href="/automobile">Industries — Automobile</a>
     <a href="/modules">Modules</a>
     <a href="/docs">Resources — Docs</a>
     <a href="/pricing">Pricing</a>
+    <a href="/clients-partners">Clients &amp; Partners</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
     <a class="sf-btn sf-btn--primary" href="/contact">Book a Demo</a>
@@ -102,7 +109,7 @@
     <h2>Platform capabilities</h2>
     <div class="sf-feat-grid sf-feat-grid--4" style="margin-top:1rem"><article class="sf-feat"><span class="sf-feat__label">Access</span><h4>Role-based desks</h4><p>Permission templates decide what a cashier, doctor, receptionist or accountant can open. Routes are guarded, not just hidden.</p></article><article class="sf-feat"><span class="sf-feat__label">Identity</span><h4>Secure sign-in</h4><p>JWT after shop-scoped login. Password reset and optional TOTP. Public pages never load patient or shop ledgers.</p></article><article class="sf-feat"><span class="sf-feat__label">Tenancy</span><h4>Shop switcher, one organisation</h4><p>Owners can hold more than one shop under a tenant. MULTI_OUTLET is a plan module; data stays shop-scoped unless a desk is tenant-wide (patients, some clinic records).</p></article><article class="sf-feat"><span class="sf-feat__label">Billing</span><h4>Split payments and dues</h4><p>Cash, UPI, card and other splits on the same bill. Outstanding filters and a payment workspace collect what is still due.</p></article><article class="sf-feat"><span class="sf-feat__label">GST</span><h4>Shop GST profile + reports</h4><p>GSTIN and inclusive/exclusive pricing on the shop. GSTR summary and GST recon screens exist. Full e-invoice push only when gst-service is enabled.</p></article><article class="sf-feat"><span class="sf-feat__label">Reports</span><h4>Owner dashboard and report centre</h4><p>KPI boards for retail, wholesale dayboard, healthcare executive view, and a catalogue of operational reports after sign-in.</p></article><article class="sf-feat"><span class="sf-feat__label">People</span><h4>Staff invite + party master</h4><p>Staff are invited into auth. Customers, patients or buyers live in the party list — labels change with business type.</p></article><article class="sf-feat"><span class="sf-feat__label">Ops</span><h4>Alerts and offline queue</h4><p>Business alerts (stock, expiry, overdue credit) and an offline sync queue for orders and inventory when the counter drops the network.</p></article></div>
     <h2>Vertical desks</h2>
-    <div class="sf-grid sf-grid-3" style="margin:1rem 0 2rem"><a class="sf-card" href="/retail"><span class="sf-ico">RT</span><h3>Retail &amp; counter</h3><p>Sell smarter. Track every item.</p></a><a class="sf-card" href="/pharmacy-software"><span class="sf-ico">PH</span><h3>Pharmacy / medical store</h3><p>From the batch to the bill, keep the counter moving.</p></a><a class="sf-card" href="/features"><span class="sf-ico">WS</span><h3>Wholesale &amp; distribution</h3><p>Sale, challan, invoice and credit in one depot.</p></a><a class="sf-card" href="/polyclinic"><span class="sf-ico">CL</span><h3>Clinics &amp; polyclinics</h3><p>Less paperwork. More time for patients.</p></a><a class="sf-card" href="/pathology-lab"><span class="sf-ico">LB</span><h3>Pathology / laboratory</h3><p>From booking to report, one connected worklist.</p></a><a class="sf-card" href="/school-management"><span class="sf-ico">SC</span><h3>Schools</h3><p>Same platform identity. Campus desks are not the shop POS.</p></a></div>
+    <div class="sf-grid sf-grid-3" style="margin:1rem 0 2rem"><a class="sf-card" href="/retail"><span class="sf-ico">RT</span><h3>Retail &amp; counter</h3><p>Sell smarter. Track every item.</p></a><a class="sf-card" href="/pharmacy-software"><span class="sf-ico">PH</span><h3>Pharmacy / medical store</h3><p>From the batch to the bill, keep the counter moving.</p></a><a class="sf-card" href="/features"><span class="sf-ico">WS</span><h3>Wholesale &amp; distribution</h3><p>Sale, challan, invoice and credit in one depot.</p></a><a class="sf-card" href="/polyclinic"><span class="sf-ico">CL</span><h3>Clinics &amp; polyclinics</h3><p>Less paperwork. More time for patients.</p></a><a class="sf-card" href="/automobile"><span class="sf-ico">AU</span><h3>Automobile parts and workshop</h3><p>Parts on the shelf. The vehicle on the job card.</p></a><a class="sf-card" href="/pathology-lab"><span class="sf-ico">LB</span><h3>Pathology / laboratory</h3><p>From booking to report, one connected worklist.</p></a><a class="sf-card" href="/school-management"><span class="sf-ico">SC</span><h3>Schools</h3><p>Same platform identity. Campus desks are not the shop POS.</p></a></div>
   </div><div class="sf-wrap" style="padding-bottom:3rem">
     <p class="sf-explorer__lede">Wholesale is a capability pack on the same workspace — there is no separate public /wholesale URL.</p>
     <div class="sf-desk" aria-hidden="true">
@@ -133,7 +140,7 @@
       </div>
       <div><h3>Product</h3><a href="/features">Features</a><a href="/crm">CRM</a><a href="/billing">Billing</a><a href="/inventory">Inventory</a><a href="/pricing">Pricing</a></div>
       <div><h3>Solutions</h3><a href="/medical-shop">Medical shop</a><a href="/pathology-lab">Pathology</a><a href="/polyclinic">Polyclinic</a><a href="/school-management">School</a></div>
-      <div><h3>Company</h3><a href="/about">About</a><a href="/contact">Contact</a><a href="/careers">Careers</a><a href="/login">Sign in</a></div>
+      <div><h3>Company</h3><a href="/about">About</a><a href="/clients-partners">Clients &amp; Partners</a><a href="/contact">Contact</a><a href="/careers">Careers</a><a href="/login">Sign in</a></div>
     </div>
     <div class="sf-wrap sf-copy"><span>© 2026 SugamFlow</span><nav class="sf-legal" aria-label="Legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/security">Security</a></nav></div>
   </footer>

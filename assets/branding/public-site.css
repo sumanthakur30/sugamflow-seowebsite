@@ -519,3 +519,20 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .sf-btn:hover { transform: none; }
 }
+
+.sf-dir { padding-bottom: 3rem; }
+.sf-dir__tools { display: grid; gap: .75rem; margin-bottom: 1rem; }
+@media (min-width: 800px) { .sf-dir__tools { grid-template-columns: 1.4fr .8fr .8fr; } }
+.sf-dir__tools label { display: grid; gap: .3rem; font-size: .82rem; font-weight: 600; color: var(--muted); }
+.sf-dir__tools input, .sf-dir__tools select, .sf-dir__form input, .sf-dir__form select, .sf-dir__form textarea {
+  width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: .6rem .7rem; font: inherit; color: var(--ink);
+}
+.sf-dir__grid { display: grid; gap: .8rem; }
+@media (min-width: 720px) { .sf-dir__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .sf-dir__grid { grid-template-columns: repeat(3, 1fr); } }
+.sf-dir__card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 1rem; display: grid; gap: .35rem; }
+.sf-dir__card img { width: 56px; height: 56px; object-fit: contain; }
+.sf-dir__card h2 { margin: 0; font-size: 1.05rem; }
+.sf-dir__card p, .sf-dir__detail p { margin: 0; color: var(--ink-soft); }
+.sf-dir__detail, .sf-dir__form { margin-top: 1.2rem; display: grid; gap: .7rem; }
+.sf-dir__form { max-width: 40rem; }

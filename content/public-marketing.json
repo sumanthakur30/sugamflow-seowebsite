@@ -721,6 +721,62 @@
       ]
     },
     {
+      "path": "/automobile",
+      "pageId": "automobile",
+      "title": "Automobile Parts and Workshop Software | SugamFlow",
+      "description": "SugamFlow automobile businesses record the vehicle being serviced, sell spare parts, and run workshop job cards with GST billing. Showroom vehicle stock, test drives and fleet trips are not shipped.",
+      "h1": "Parts on the shelf. The vehicle on the job card.",
+      "lead": "Spare-parts counters, workshops, service centres, dealers, tyre shops and multi-brand outlets use the automobile desks already in the product.",
+      "updated": "11 October 2026",
+      "schema": "software",
+      "sitemap": true,
+      "related": [
+        { "path": "/crm", "label": "CRM desk" },
+        { "path": "/billing", "label": "GST billing" },
+        { "path": "/inventory", "label": "Inventory" },
+        { "path": "/contact", "label": "Book a demo" }
+      ],
+      "faq": [
+        {
+          "question": "Does this replace a vehicle showroom system?",
+          "answer": "No. The vehicle record is the car or two-wheeler being serviced: make, model, variant, year, registration and VIN. SugamFlow does not keep a stock of vehicles for sale."
+        },
+        {
+          "question": "Can a job card use spare parts from inventory?",
+          "answer": "Yes. Completing a workshop job card consumes the spare-part lines on that card. Those parts are the same catalog used at the counter."
+        },
+        {
+          "question": "Are test drives, trade-ins or fleet trips included?",
+          "answer": "No. Those records are not in the product. CRM can hold a follow-up, and billing can raise a GST invoice, but neither creates a test drive or a fleet trip."
+        }
+      ]
+    },
+    {
+      "path": "/clients-partners",
+      "pageId": "clients-partners",
+      "title": "Clients and Partners | SugamFlow",
+      "description": "Published SugamFlow clients and partners. A business appears here only after a Super Admin publishes it. Listings do not create accounts.",
+      "h1": "Clients and partners",
+      "lead": "Organizations appear here only after SugamFlow publishes them. An empty list means nothing has been approved for the public site.",
+      "updated": "11 October 2026",
+      "schema": "webpage",
+      "sitemap": true,
+      "related": [
+        { "path": "/automobile", "label": "Automobile" },
+        { "path": "/contact", "label": "Contact" }
+      ],
+      "faq": [
+        {
+          "question": "Why is a business missing?",
+          "answer": "Private and draft records stay off this page. Being a SugamFlow tenant does not by itself publish a public profile."
+        },
+        {
+          "question": "Does sending an enquiry open a login?",
+          "answer": "No. The form stores a message for the SugamFlow team. It does not create a shop, a user, or a partner login."
+        }
+      ]
+    },
+    {
       "path": "/school-management",
       "pageId": "school-management",
       "title": "School Management Software | SugamFlow",

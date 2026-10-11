@@ -119,12 +119,16 @@ function chromeNav(active) {
           </div>
         </details>
         <details class="sf-drop"><summary>Industries</summary>
-          <div class="sf-drop__menu">
+          <div class="sf-drop__menu" data-sf-industry-menu>
             <a href="/retail">Retail</a>
             <a href="/pharmacy-software">Pharmacy</a>
             <a href="/grocery">Grocery</a>
             <a href="/electronics">Electronics</a>
             <a href="/restaurant">Restaurant</a>
+            <a href="/automobile">Automobile</a>
+            <a href="/polyclinic">Clinics</a>
+            <a href="/pathology-lab">Laboratory</a>
+            <a href="/school-management">Schools</a>
           </div>
         </details>
         <details class="sf-drop"><summary>Resources</summary>
@@ -137,6 +141,7 @@ function chromeNav(active) {
         </details>
         <a href="/modules"${on('/modules')}>Modules</a>
         <a href="/pricing"${on('/pricing')}>Pricing</a>
+        <a href="/clients-partners"${on('/clients-partners')}>Clients</a>
         <a href="/about"${on('/about')}>About</a>
       </nav>
       <button class="sf-menu-btn" type="button" data-sf-menu aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
@@ -151,9 +156,11 @@ function chromeNav(active) {
     <a href="/features">Products — Features</a>
     <a href="/medical-shop">Solutions — Medical shop</a>
     <a href="/retail">Industries — Retail</a>
+    <a href="/automobile">Industries — Automobile</a>
     <a href="/modules">Modules</a>
     <a href="/docs">Resources — Docs</a>
     <a href="/pricing">Pricing</a>
+    <a href="/clients-partners">Clients &amp; Partners</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
     <a class="sf-btn sf-btn--primary" href="/contact">Book a Demo</a>
@@ -241,6 +248,7 @@ const INDUSTRY_PAGES = {
   },
   '/pathology-lab': { id: 'laboratory' },
   '/school-management': { id: 'school' },
+  '/automobile': { id: 'automobile' },
   '/features': { id: 'platform' }
 };
 
@@ -343,11 +351,38 @@ function chromeFooter() {
       </div>
       <div><h3>Product</h3><a href="/features">Features</a><a href="/crm">CRM</a><a href="/billing">Billing</a><a href="/inventory">Inventory</a><a href="/pricing">Pricing</a></div>
       <div><h3>Solutions</h3><a href="/medical-shop">Medical shop</a><a href="/pathology-lab">Pathology</a><a href="/polyclinic">Polyclinic</a><a href="/school-management">School</a></div>
-      <div><h3>Company</h3><a href="/about">About</a><a href="/contact">Contact</a><a href="/careers">Careers</a><a href="/login">Sign in</a></div>
+      <div><h3>Company</h3><a href="/about">About</a><a href="/clients-partners">Clients &amp; Partners</a><a href="/contact">Contact</a><a href="/careers">Careers</a><a href="/login">Sign in</a></div>
     </div>
     <div class="sf-wrap sf-copy"><span>© 2026 SugamFlow</span><nav class="sf-legal" aria-label="Legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/security">Security</a></nav></div>
   </footer>
   <script src="/assets/branding/public-site.js" defer></script>`;
+}
+
+function renderDirectoryMain(faqHtml) {
+  return `<div class="sf-wrap sf-dir">
+    <div class="sf-dir__tools">
+      <label>Search <input id="sf-dir-q" type="search" placeholder="Organization name"></label>
+      <label>Type <select id="sf-dir-type"><option value="">All</option><option value="CLIENT">Clients</option><option value="TECHNOLOGY_PARTNER">Technology partners</option><option value="BUSINESS_PARTNER">Business partners</option><option value="OTHER">Other</option></select></label>
+      <label>Industry <select id="sf-dir-industry"><option value="">All</option></select></label>
+    </div>
+    <p id="sf-dir-status" class="sf-note">Loading published organizations…</p>
+    <div id="sf-dir-list" class="sf-dir__grid"></div>
+    <article id="sf-dir-detail" class="sf-card sf-dir__detail" hidden></article>
+    ${faqHtml}
+    <form id="sf-dir-form" class="sf-card sf-dir__form">
+      <h2>Partnership or client enquiry</h2>
+      <p>This saves an enquiry for the SugamFlow team. It does not open an account or publish your organization.</p>
+      <label>I am enquiring as <select name="kind" required><option value="CLIENT">A prospective client</option><option value="PARTNER">A prospective partner</option></select></label>
+      <label>Organization <input name="organizationName" required maxlength="160"></label>
+      <label>Your name <input name="contactName" required maxlength="120"></label>
+      <label>Email <input name="email" type="email" required maxlength="160"></label>
+      <label>Phone <input name="phone" maxlength="40"></label>
+      <label>Message <textarea name="message" required maxlength="1000" rows="4"></textarea></label>
+      <button class="sf-btn sf-btn--primary" type="submit">Send enquiry</button>
+    </form>
+    <p id="sf-dir-form-status" role="status"></p>
+  </div>
+  <script src="/assets/branding/directory.js" defer></script>`;
 }
 
 function renderPage(page) {
@@ -396,6 +431,9 @@ function renderPage(page) {
     heroKicker = 'CRM';
     const relatedHtml = `<nav class="sf-related" aria-label="Related pages"><h2>Related pages</h2><ul>${links.map((link) => `<li><a href="${escapeHtml(link.path)}">${escapeHtml(link.label)}</a></li>`).join('')}</ul></nav>`;
     mainInner = renderCrmMain(faq, relatedHtml);
+  } else if (page.path === '/clients-partners') {
+    heroKicker = 'DIRECTORY';
+    mainInner = renderDirectoryMain(faq);
   } else if (page.path === '/billing') {
     mainInner = `${invoicePreview()}${mainInner}`;
   } else if (mapped?.id === 'platform') {
@@ -411,6 +449,7 @@ function renderPage(page) {
       heroLead = industry.description;
       mainInner = `${renderIndustryMain(industry, mapped.note)}
       <main class="sf-article">
+        ${faq}
         <nav class="sf-related" aria-label="Related pages"><h2>Related pages</h2><ul>${links.map((link) => `<li><a href="${escapeHtml(link.path)}">${escapeHtml(link.label)}</a></li>`).join('')}</ul></nav>
         <p class="sf-updated">Last updated ${escapeHtml(page.updated)}</p>
       </main>`;

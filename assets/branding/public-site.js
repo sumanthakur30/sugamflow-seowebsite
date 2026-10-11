@@ -60,4 +60,22 @@
       el.classList.add('is-in');
     });
   }
+  var industryMenu = document.querySelector('[data-sf-industry-menu]');
+  if (industryMenu) {
+    fetch('/api/v1/public/industries', { headers: { Accept: 'application/json' } })
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (rows) {
+        if (!rows || !rows.length) return;
+        var html = rows.map(function (row) {
+          var path = String(row.path || '');
+          if (!/^\/[a-z0-9/-]+$/.test(path)) return '';
+          var label = String(row.navLabel || '').replace(/[&<>"]/g, function (ch) {
+            return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch];
+          });
+          return '<a href="' + path + '">' + label + '</a>';
+        }).join('');
+        if (html) industryMenu.innerHTML = html;
+      })
+      .catch(function () {});
+  }
 })();

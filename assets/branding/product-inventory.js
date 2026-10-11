@@ -71,7 +71,7 @@ window.SF_PRODUCT = {
     }
   ],
   alsoShipped: [
-    { name: 'Automobile parts & workshop', href: '/features', note: 'Vehicle master, parts finder, counter, job cards, warranty.' },
+    { name: 'Automobile parts & workshop', href: '/automobile', note: 'Vehicle registration, parts finder, counter, job cards, warranty. Not showroom stock or fleet trips.' },
     { name: 'Grocery & electronics', href: '/retail', note: 'Same retail stack; electronics has extra owner-dashboard insights.' },
     { name: 'Restaurant / F&B', href: '/restaurant', note: 'Retail billing only. Table/KOT is Coming Soon.' }
   ],
@@ -159,6 +159,27 @@ window.SF_PRODUCT = {
         { label: 'Hospital', title: 'IPD is hospital-only', text: 'Wards, nursing, rounds, ER and IPD billing exist for HOSPITAL tenants. Clinic and polyclinic stay OPD-first. Hospital is not self-serve registration.' }
       ],
       workflow: ['Patient', 'Appointment / queue', 'Consultation', 'Prescription', 'Pharmacy or lab', 'Visit bill', 'Patient history']
+    },
+    {
+      id: 'automobile',
+      nav: 'Automobile',
+      name: 'Automobile parts and workshop',
+      kicker: 'AUTOMOBILE',
+      headline: 'Parts on the shelf. The vehicle on the job card.',
+      description: 'Spare-parts shops, workshops, service centres, dealers, tyre shops and multi-brand counters record the vehicle being serviced, sell parts, and run job cards. A showroom stock of vehicles for sale, test drives, trade-ins and fleet trips are not shipped.',
+      ico: 'AU',
+      href: '/automobile',
+      hrefLabel: 'Explore automobile →',
+      chips: ['Make, model, variant', 'Registration and VIN', 'Spare parts', 'Parts finder', 'Job cards', 'Warranty claims', 'Core returns', 'GST billing'],
+      features: [
+        { label: 'Vehicle', title: 'The vehicle being serviced', text: 'Make, model, variant, year, fuel type and engine type, plus registration number and VIN, linked to a customer. This is not a stock list of cars for sale, and it does not store a vehicle photo gallery.' },
+        { label: 'Parts', title: 'Spare parts and the counter', text: 'Parts use the product catalog: part number, category and selling price, with a parts finder and counter billing. There is no manufacturer catalog feed.' },
+        { label: 'Workshop', title: 'Job cards consume stock', text: 'A job card keeps the registration, make, model, variant and year. Completing it consumes the spare-part lines. Technician assignment and booked service slots are not separate records.' },
+        { label: 'Aftersales', title: 'Warranty and core returns', text: 'Warranty claims and core returns live on the automobile desk. There is no OEM warranty connection.' },
+        { label: 'CRM', title: 'Follow-up stays on the CRM desk', text: 'Leads, tasks and a timeline are the separate CRM desk. A won lead does not create a GST invoice, a test drive, or a trade-in.' },
+        { label: 'Not shipped', title: 'Showroom sales and fleet', text: 'New and used vehicle inventory for sale, test-drive booking, trade-in, driver assignment, trips, mileage and insurance-expiry reminders are not in the product.' }
+      ],
+      workflow: ['Vehicle registration', 'Spare part', 'Job card', 'Parts consumed', 'GST invoice']
     },
     {
       id: 'laboratory',
