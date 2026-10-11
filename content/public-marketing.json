@@ -752,6 +752,35 @@
       ]
     },
     {
+      "path": "/field-force",
+      "pageId": "field-force",
+      "title": "Field Force Software | SugamFlow",
+      "description": "SugamFlow field force covers promoters, salesmen, business leads, beat plans, visit activities, check-in, and conversion into a real shop. Location is stored only when the user submits it.",
+      "h1": "Leads, beats, and visits for the people on the road.",
+      "lead": "The field-force desk is a separate service for promoters and salesmen. It does not track a phone in the background.",
+      "updated": "11 October 2026",
+      "schema": "software",
+      "sitemap": true,
+      "related": [
+        { "path": "/crm", "label": "CRM desk" },
+        { "path": "/contact", "label": "Book a demo" }
+      ],
+      "faq": [
+        {
+          "question": "Does check-in track the phone all day?",
+          "answer": "No. Check-in, check-out, a lead, an activity, and a GPS log store coordinates only when the signed-in user submits them. There is no background tracker and no geofence."
+        },
+        {
+          "question": "Does a field lead become a shop automatically?",
+          "answer": "No. A lead stays a lead until someone completes conversion. That step can register a real shop. It does not invent a public client listing."
+        },
+        {
+          "question": "Is there an offline route planner?",
+          "answer": "No. Beats are named areas with a state, city, and description. The service does not optimise a driving route and does not sync an offline queue."
+        }
+      ]
+    },
+    {
       "path": "/clients-partners",
       "pageId": "clients-partners",
       "title": "Clients and Partners | SugamFlow",

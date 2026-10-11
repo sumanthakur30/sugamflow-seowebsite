@@ -171,6 +171,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://sugamflow.com/field-force</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://sugamflow.com/clients-partners</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

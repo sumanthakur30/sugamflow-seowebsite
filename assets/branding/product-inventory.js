@@ -182,6 +182,27 @@ window.SF_PRODUCT = {
       workflow: ['Vehicle registration', 'Spare part', 'Job card', 'Parts consumed', 'GST invoice']
     },
     {
+      id: 'field-force',
+      nav: 'Field force',
+      name: 'Field force',
+      kicker: 'FIELD FORCE',
+      headline: 'Leads, beats, and visits for the people on the road.',
+      description: 'Promoters and salesmen keep business leads, log visits and follow-ups, check in, and convert a qualified lead into a real shop. Location is recorded only when the signed-in user submits it. There is no background tracking and no geofence.',
+      ico: 'FF',
+      href: '/field-force',
+      hrefLabel: 'Explore field force →',
+      chips: ['Promoters', 'Salesmen', 'Business leads', 'Beat plans', 'Visit activities', 'Check-in', 'Commissions', 'Shop conversion'],
+      features: [
+        { label: 'People', title: 'Promoters and salesmen', text: 'Field accounts are separate from a shop owner login. Super Admin sets limits for promoters, salesmen, and field users on the shop.' },
+        { label: 'Leads', title: 'A lead is not yet a shop', text: 'A business lead stores the outlet name, owner, mobile, city, and remarks. Duplicate checks can use mobile, GSTIN, name, and a supplied map point. Creating a lead does not open a login.' },
+        { label: 'Work', title: 'Visits, calls, and follow-ups', text: 'Activities are visit, call, demo, follow-up, KYC collection, installation, payment collection, or other. Each can keep notes, a next follow-up date, and a photo URL.' },
+        { label: 'Beats', title: 'Named areas, not a route engine', text: 'A beat has a name, state, city, and area description, and can be assigned. The product does not calculate an optimised driving route.' },
+        { label: 'Place', title: 'Location only when submitted', text: 'Check-in, check-out, a lead, an activity, and a GPS log can store latitude and longitude that the user sends. SugamFlow does not track a phone in the background and does not draw a geofence.' },
+        { label: 'Handoff', title: 'Conversion creates a real shop', text: 'A completed conversion can register an actual shop. Commission plans and entries stay on the field-force desk. Offline sync is not part of this service.' }
+      ],
+      workflow: ['Beat', 'Business lead', 'Visit or call', 'Follow-up', 'Conversion', 'Shop']
+    },
+    {
       id: 'laboratory',
       nav: 'Laboratory',
       name: 'Pathology / laboratory',

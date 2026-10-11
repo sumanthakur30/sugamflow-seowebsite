@@ -126,6 +126,7 @@ function chromeNav(active) {
             <a href="/electronics">Electronics</a>
             <a href="/restaurant">Restaurant</a>
             <a href="/automobile">Automobile</a>
+            <a href="/field-force">Field force</a>
             <a href="/polyclinic">Clinics</a>
             <a href="/pathology-lab">Laboratory</a>
             <a href="/school-management">Schools</a>
@@ -157,6 +158,7 @@ function chromeNav(active) {
     <a href="/medical-shop">Solutions — Medical shop</a>
     <a href="/retail">Industries — Retail</a>
     <a href="/automobile">Industries — Automobile</a>
+    <a href="/field-force">Industries — Field force</a>
     <a href="/modules">Modules</a>
     <a href="/docs">Resources — Docs</a>
     <a href="/pricing">Pricing</a>
@@ -249,6 +251,7 @@ const INDUSTRY_PAGES = {
   '/pathology-lab': { id: 'laboratory' },
   '/school-management': { id: 'school' },
   '/automobile': { id: 'automobile' },
+  '/field-force': { id: 'field-force' },
   '/features': { id: 'platform' }
 };
 
