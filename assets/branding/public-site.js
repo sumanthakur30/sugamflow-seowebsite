@@ -25,11 +25,30 @@
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       document.body.classList.toggle('sf-nav-lock', open);
     });
+    function closeDrawer() {
+      drawer.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('sf-nav-lock');
+    }
     drawer.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        drawer.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('sf-nav-lock');
+      link.addEventListener('click', closeDrawer);
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key !== 'Escape') return;
+      if (drawer.classList.contains('is-open')) {
+        var openDrop = drawer.querySelector('.sf-drop[open]');
+        if (openDrop) {
+          openDrop.removeAttribute('open');
+          var summary = openDrop.querySelector('summary');
+          if (summary) summary.focus();
+          return;
+        }
+        closeDrawer();
+        toggle.focus();
+        return;
+      }
+      document.querySelectorAll('.sf-drop[open]').forEach(function (drop) {
+        drop.removeAttribute('open');
       });
     });
   }
@@ -60,8 +79,8 @@
       el.classList.add('is-in');
     });
   }
-  var industryMenu = document.querySelector('[data-sf-industry-menu]');
-  if (industryMenu) {
+  var industryMenus = document.querySelectorAll('[data-sf-industry-menu]');
+  if (industryMenus.length) {
     fetch('/api/v1/public/industries', { headers: { Accept: 'application/json' } })
       .then(function (res) { return res.ok ? res.json() : null; })
       .then(function (rows) {
@@ -74,7 +93,8 @@
           });
           return '<a href="' + path + '">' + label + '</a>';
         }).join('');
-        if (html) industryMenu.innerHTML = html;
+        if (!html) return;
+        industryMenus.forEach(function (menu) { menu.innerHTML = html; });
       })
       .catch(function () {});
   }

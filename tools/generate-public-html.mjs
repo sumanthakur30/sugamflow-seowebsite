@@ -152,15 +152,53 @@ function chromeNav(active) {
       </div>
     </div>
   </header>
-  <div class="sf-drawer" data-sf-drawer>
-    <a href="/crm">Products — CRM</a>
-    <a href="/features">Products — Features</a>
-    <a href="/medical-shop">Solutions — Medical shop</a>
-    <a href="/retail">Industries — Retail</a>
-    <a href="/automobile">Industries — Automobile</a>
-    <a href="/field-force">Industries — Field force</a>
+    <div class="sf-drawer" data-sf-drawer>
+    <details class="sf-drop">
+      <summary>Products</summary>
+      <div class="sf-drop__menu">
+        <a href="/features">Features</a>
+        <a href="/crm">CRM</a>
+        <a href="/billing">GST billing</a>
+        <a href="/inventory">Inventory</a>
+        <a href="/payments-software">Payments</a>
+        <a href="/ai">Assistive AI</a>
+      </div>
+    </details>
+    <details class="sf-drop">
+      <summary>Solutions</summary>
+      <div class="sf-drop__menu">
+        <a href="/medical-shop">Medical shop</a>
+        <a href="/pathology-lab">Pathology lab</a>
+        <a href="/doctor-opd">Doctor OPD</a>
+        <a href="/polyclinic">Polyclinic</a>
+        <a href="/school-management">School ERP</a>
+      </div>
+    </details>
+    <details class="sf-drop">
+      <summary>Industries</summary>
+      <div class="sf-drop__menu" data-sf-industry-menu>
+        <a href="/retail">Retail</a>
+        <a href="/pharmacy-software">Pharmacy</a>
+        <a href="/grocery">Grocery</a>
+        <a href="/electronics">Electronics</a>
+        <a href="/restaurant">Restaurant</a>
+        <a href="/automobile">Automobile</a>
+        <a href="/field-force">Field force</a>
+        <a href="/polyclinic">Clinics</a>
+        <a href="/pathology-lab">Laboratory</a>
+        <a href="/school-management">Schools</a>
+      </div>
+    </details>
+    <details class="sf-drop">
+      <summary>Resources</summary>
+      <div class="sf-drop__menu">
+        <a href="/docs">Documentation</a>
+        <a href="/faq">FAQ</a>
+        <a href="/blog">Knowledge centre</a>
+        <a href="/security">Security</a>
+      </div>
+    </details>
     <a href="/modules">Modules</a>
-    <a href="/docs">Resources — Docs</a>
     <a href="/pricing">Pricing</a>
     <a href="/clients-partners">Clients &amp; Partners</a>
     <a href="/about">About</a>
@@ -379,7 +417,7 @@ function renderDirectoryMain(faqHtml) {
       <label>Organization <input name="organizationName" required maxlength="160"></label>
       <label>Your name <input name="contactName" required maxlength="120"></label>
       <label>Email <input name="email" type="email" required maxlength="160"></label>
-      <label>Phone <input name="phone" maxlength="40"></label>
+      <label>Phone <input name="phone" type="tel" maxlength="40" inputmode="tel"></label>
       <label>Message <textarea name="message" required maxlength="1000" rows="4"></textarea></label>
       <button class="sf-btn sf-btn--primary" type="submit">Send enquiry</button>
     </form>

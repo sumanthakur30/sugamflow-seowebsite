@@ -24,6 +24,7 @@ body {
   background: var(--white);
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
   line-height: 1.55;
+  overflow-wrap: break-word;
 }
 body.sf-nav-lock { overflow: hidden; }
 a { color: inherit; }
@@ -60,6 +61,7 @@ img { max-width: 100%; }
 .sf-brand__meta { display: none; }
 @media (min-width: 720px) {
   .sf-brand__meta { display: flex; flex-direction: column; }
+}
 .sf-brand__name { font-weight: 800; letter-spacing: -.03em; line-height: 1.1; }
 .sf-brand__tag { font-size: .68rem; color: var(--muted); font-weight: 600; }
 
@@ -88,7 +90,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   position: absolute;
   top: calc(100% + 8px);
   left: 0;
-  min-width: 240px;
+  min-width: min(240px, calc(100vw - 2rem));
+  max-width: calc(100vw - 2rem);
+  max-height: min(70vh, 28rem);
+  overflow: auto;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -103,9 +108,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .sf-drop__menu small { display: block; font-weight: 500; color: var(--muted); font-size: .75rem; }
 
-.sf-header__cta { display: none; gap: .5rem; margin-left: .5rem; align-items: center; }
+.sf-header__cta { display: flex; gap: .5rem; margin-left: auto; align-items: center; }
+.sf-header__cta .sf-btn--ghost { display: none; }
 .sf-menu-btn {
-  margin-left: auto;
+  margin-left: .45rem;
   width: 44px; height: 44px;
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -116,7 +122,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 @media (min-width: 1080px) {
   .sf-nav { display: flex; }
   .sf-menu-btn { display: none; }
-  .sf-header__cta { display: flex; margin-left: 0; }
+  .sf-header__cta { margin-left: 0; }
+  .sf-header__cta .sf-btn--ghost { display: inline-flex; }
+}
+@media (max-width: 1079px) {
+  .sf-header__bar { gap: .55rem; }
+  .sf-header__cta .sf-btn { padding: 0 .75rem; }
 }
 
 .sf-drawer {
@@ -125,11 +136,33 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   inset: var(--nav-h) 0 0 0;
   background: #fff;
   z-index: 35;
-  padding: 1.25rem 1.2rem 2rem;
+  padding: 1.25rem 1.2rem calc(2rem + env(safe-area-inset-bottom));
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .sf-drawer.is-open { display: block; }
 .sf-drawer a { display: block; padding: .9rem 0; border-bottom: 1px solid var(--line); text-decoration: none; font-weight: 650; }
+.sf-drawer .sf-drop { position: static; }
+.sf-drawer .sf-drop > summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: .9rem 0;
+  border-bottom: 1px solid var(--line);
+  font-weight: 650;
+}
+.sf-drawer .sf-drop__menu {
+  position: static;
+  min-width: 0;
+  max-width: none;
+  max-height: none;
+  overflow: visible;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0 0 .15rem .85rem;
+  background: transparent;
+}
 .sf-drawer .sf-btn { width: 100%; margin-top: 1rem; }
 
 .sf-btn {
@@ -164,8 +197,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .sf-hero h1 {
   margin: 1rem 0 .85rem;
-  font-size: clamp(2.15rem, 4.6vw, 3.55rem);
-  line-height: .92;
+  font-size: clamp(1.85rem, 8vw, 3.55rem);
+  line-height: 1.05;
   letter-spacing: -.055em;
   font-weight: 800;
 }
@@ -525,7 +558,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 @media (min-width: 800px) { .sf-dir__tools { grid-template-columns: 1.4fr .8fr .8fr; } }
 .sf-dir__tools label { display: grid; gap: .3rem; font-size: .82rem; font-weight: 600; color: var(--muted); }
 .sf-dir__tools input, .sf-dir__tools select, .sf-dir__form input, .sf-dir__form select, .sf-dir__form textarea {
-  width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: .6rem .7rem; font: inherit; color: var(--ink);
+  width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: .6rem .7rem; font: inherit; font-size: 16px; color: var(--ink);
 }
 .sf-dir__grid { display: grid; gap: .8rem; }
 @media (min-width: 720px) { .sf-dir__grid { grid-template-columns: repeat(2, 1fr); } }
