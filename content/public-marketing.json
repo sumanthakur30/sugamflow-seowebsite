@@ -9,6 +9,36 @@
   ],
   "pages": [
     {
+      "path": "/crm",
+      "pageId": "crm",
+      "title": "SugamFlow CRM | Leads, Pipeline, and Follow-up",
+      "description": "SugamFlow CRM is a separate signed-in desk for leads, pipeline stages, tasks, and a timeline. Conversion into a shop customer, school inquiry, or field-force record runs only when that handoff is enabled.",
+      "h1": "Every customer relationship, moving forward.",
+      "lead": "Capture a lead, qualify it on a pipeline, keep the follow-up, and hand it to the right workspace. CRM does not replace GST billing or the clinic desk.",
+      "updated": "11 October 2026",
+      "schema": "software",
+      "sitemap": true,
+      "related": [
+        { "path": "/features", "label": "Platform features" },
+        { "path": "/billing", "label": "GST billing" },
+        { "path": "/contact", "label": "Book a demo" }
+      ],
+      "faq": [
+        {
+          "question": "Is CRM the same screen as shop billing?",
+          "answer": "No. CRM is its own signed-in desk. Billing, stock, and clinic work stay in the operations workspace. A configured conversion can create a shop customer, a school inquiry, or a field-force record from a lead."
+        },
+        {
+          "question": "What does a lead store?",
+          "answer": "A lead has a title, contact or company, phone, email, source, pipeline stage, owner, priority, and an optional amount in INR. Tasks and a timeline sit on that record."
+        },
+        {
+          "question": "Does winning a lead create an invoice?",
+          "answer": "Not by itself. Collections and GST invoices are created in the billing workspace after the customer exists there."
+        }
+      ]
+    },
+    {
       "path": "/about",
       "pageId": "about",
       "title": "About SugamFlow – Cloud Software for Indian Businesses",

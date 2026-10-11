@@ -102,6 +102,7 @@ function chromeNav(active) {
         <details class="sf-drop"><summary>Products</summary>
           <div class="sf-drop__menu">
             <a href="/features">Features<small>What the platform does</small></a>
+            <a href="/crm">CRM<small>Leads, pipeline, and follow-up</small></a>
             <a href="/billing">GST billing</a>
             <a href="/inventory">Inventory</a>
             <a href="/payments-software">Payments</a>
@@ -141,11 +142,12 @@ function chromeNav(active) {
       <button class="sf-menu-btn" type="button" data-sf-menu aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
       <div class="sf-header__cta">
         <a class="sf-btn sf-btn--ghost" href="/login">Sign in</a>
-        <a class="sf-btn sf-btn--primary" href="/register">Get Started</a>
+        <a class="sf-btn sf-btn--primary" href="/contact">Book a Demo</a>
       </div>
     </div>
   </header>
   <div class="sf-drawer" data-sf-drawer>
+    <a href="/crm">Products — CRM</a>
     <a href="/features">Products — Features</a>
     <a href="/medical-shop">Solutions — Medical shop</a>
     <a href="/retail">Industries — Retail</a>
@@ -154,7 +156,7 @@ function chromeNav(active) {
     <a href="/pricing">Pricing</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
-    <a class="sf-btn sf-btn--primary" href="/register">Get Started</a>
+    <a class="sf-btn sf-btn--primary" href="/contact">Book a Demo</a>
   </div>`;
 }
 
@@ -287,6 +289,51 @@ function renderPlatformMain() {
   </div>${wholesaleBlock}`;
 }
 
+function invoicePreview() {
+  return `<div class="sf-wrap" style="padding-bottom:1.5rem">
+    <div class="sf-invoice" aria-hidden="true">
+      <header><strong>Tax invoice</strong><span>INV-1842 · Demo</span></header>
+      <table>
+        <thead><tr><th>Item</th><th>GST</th><th>Amount</th></tr></thead>
+        <tbody>
+          <tr><td>Counter sale</td><td>18%</td><td>₹1,180</td></tr>
+          <tr><td>Collected</td><td>Cash + UPI</td><td>₹1,180</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sf-note">Illustrative invoice. Live bills, PDFs, and dues stay inside the signed-in workspace. e-Invoice and e-way bill run only when a GSP is configured.</p>
+  </div>`;
+}
+
+function renderCrmMain(faqHtml, relatedHtml) {
+  return `<div class="sf-wrap" style="padding-bottom:2.5rem">
+    <div class="sf-pipe">
+      <div class="sf-board" aria-hidden="true">
+        <section><h3>New</h3><p>City pharmacy<small>Source · Walk-in · ₹48,000</small></p><p>Clinic enquiry<small>Source · Website</small></p></section>
+        <section><h3>Qualified</h3><p>Wholesale buyer<small>Follow-up · Tomorrow</small></p></section>
+        <section><h3>Won</h3><p>Converted lead<small>Target · Shop customer</small></p></section>
+      </div>
+      <aside class="sf-profile">
+        <h3>Meera Sharma</h3>
+        <p>Demo contact · not a real customer</p>
+        <ul>
+          <li>Owner assigned</li>
+          <li>Open task: call back</li>
+          <li>Timeline note from yesterday</li>
+        </ul>
+      </aside>
+    </div>
+    <p class="sf-note">Sample pipeline. SugamFlow CRM is a separate signed-in desk. Figures are not live tenant data.</p>
+    <div class="sf-journey" style="margin-top:1.4rem">
+      <article><strong>01</strong><h3>Capture</h3><p>Leads store a name, company, phone, source, and amount.</p></article>
+      <article><strong>02</strong><h3>Work the stage</h3><p>Each lead sits on a pipeline stage with an owner, priority, and tasks.</p></article>
+      <article><strong>03</strong><h3>Remember the thread</h3><p>A timeline keeps interaction history on the lead.</p></article>
+      <article><strong>04</strong><h3>Hand off</h3><p>When conversion is enabled, a lead can become a shop customer, a school inquiry, or a field-force record. Billing still happens in the operations workspace.</p></article>
+    </div>
+    <main class="sf-article">${faqHtml}${relatedHtml}</main>
+  </div>`;
+}
+
 function chromeFooter() {
   return `<footer class="sf-footer">
     <div class="sf-wrap sf-footer__grid">
@@ -294,7 +341,7 @@ function chromeFooter() {
         <img src="/assets/branding/sugamflow-logo.png" alt="SugamFlow" width="120" height="32">
         <p>One Flow. Every Business. Cloud software for Indian retail, healthcare and schools.</p>
       </div>
-      <div><h3>Product</h3><a href="/features">Features</a><a href="/billing">Billing</a><a href="/inventory">Inventory</a><a href="/pricing">Pricing</a></div>
+      <div><h3>Product</h3><a href="/features">Features</a><a href="/crm">CRM</a><a href="/billing">Billing</a><a href="/inventory">Inventory</a><a href="/pricing">Pricing</a></div>
       <div><h3>Solutions</h3><a href="/medical-shop">Medical shop</a><a href="/pathology-lab">Pathology</a><a href="/polyclinic">Polyclinic</a><a href="/school-management">School</a></div>
       <div><h3>Company</h3><a href="/about">About</a><a href="/contact">Contact</a><a href="/careers">Careers</a><a href="/login">Sign in</a></div>
     </div>
@@ -324,10 +371,10 @@ function renderPage(page) {
     })
     .join('');
   const faq = page.faq?.length
-    ? `<section class="sf-card sf-card--plain"><h2>Questions</h2>${page.faq
+    ? `<section class="sf-faq"><h2>Questions</h2>${page.faq
         .map(
           (item) =>
-            `<h3>${escapeHtml(item.question)}</h3><p>${escapeHtml(item.answer)}</p>`
+            `<details><summary>${escapeHtml(item.question)}</summary><p>${escapeHtml(item.answer)}</p></details>`
         )
         .join('')}</section>`
     : '';
@@ -345,7 +392,13 @@ function renderPage(page) {
   </main>`;
   let heroLead = page.lead;
   let heroKicker = 'SUGAMFLOW';
-  if (mapped?.id === 'platform') {
+  if (page.path === '/crm') {
+    heroKicker = 'CRM';
+    const relatedHtml = `<nav class="sf-related" aria-label="Related pages"><h2>Related pages</h2><ul>${links.map((link) => `<li><a href="${escapeHtml(link.path)}">${escapeHtml(link.label)}</a></li>`).join('')}</ul></nav>`;
+    mainInner = renderCrmMain(faq, relatedHtml);
+  } else if (page.path === '/billing') {
+    mainInner = `${invoicePreview()}${mainInner}`;
+  } else if (mapped?.id === 'platform') {
     heroKicker = 'PRODUCT';
     heroLead = 'Capabilities confirmed in the signed-in workspace — not a generic SaaS checklist.';
     mainInner = `${renderPlatformMain()}
