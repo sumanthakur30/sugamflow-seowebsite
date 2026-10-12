@@ -29,6 +29,11 @@ Allow: /careers
 Allow: /privacy
 Allow: /terms
 Allow: /security
+Allow: /crm
+Allow: /automobile
+Allow: /field-force$
+Allow: /clients-partners
+Allow: /modules
 Allow: /llms.txt
 Allow: /sitemap.xml
 

@@ -24,13 +24,18 @@ function canonical(path) {
 }
 
 function jsonLd(page) {
-  const crumbs = {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'SugamFlow', item: `${origin}/` },
-      { '@type': 'ListItem', position: 2, name: page.h1, item: canonical(page.path) }
-    ]
-  };
+  const crumbs = [
+    { '@type': 'ListItem', position: 1, name: 'SugamFlow', item: `${origin}/` }
+  ];
+  if (page.path.startsWith('/blog/')) {
+    crumbs.push({ '@type': 'ListItem', position: 2, name: 'Knowledge centre', item: `${origin}/blog` });
+    crumbs.push({ '@type': 'ListItem', position: 3, name: page.h1, item: canonical(page.path) });
+  } else if (page.path.startsWith('/docs/')) {
+    crumbs.push({ '@type': 'ListItem', position: 2, name: 'Documentation', item: `${origin}/docs` });
+    crumbs.push({ '@type': 'ListItem', position: 3, name: page.h1, item: canonical(page.path) });
+  } else {
+    crumbs.push({ '@type': 'ListItem', position: 2, name: page.h1, item: canonical(page.path) });
+  }
   const graph = [
     {
       '@type': 'Organization',
@@ -40,18 +45,15 @@ function jsonLd(page) {
       email: 'career@sugamflow.com',
       logo: `${origin}/assets/branding/sugamflow-logo.png`
     },
-    crumbs
+    {
+      '@type': 'WebSite',
+      '@id': `${origin}/#website`,
+      name: 'SugamFlow',
+      url: `${origin}/`
+    },
+    { '@type': 'BreadcrumbList', itemListElement: crumbs }
   ];
-  if (page.schema === 'faq' && page.faq?.length) {
-    graph.push({
-      '@type': 'FAQPage',
-      mainEntity: page.faq.map((item) => ({
-        '@type': 'Question',
-        name: item.question,
-        acceptedAnswer: { '@type': 'Answer', text: item.answer }
-      }))
-    });
-  } else if (page.schema === 'article') {
+  if (page.schema === 'article') {
     graph.push({
       '@type': 'Article',
       headline: page.h1,
@@ -63,20 +65,30 @@ function jsonLd(page) {
   } else if (page.schema === 'software') {
     graph.push({
       '@type': 'SoftwareApplication',
-      name: 'SugamFlow',
+      name: page.title,
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Web',
       url: canonical(page.path),
       description: page.description,
       provider: { '@id': `${origin}/#organization` }
     });
-  } else {
+  } else if (page.schema !== 'faq') {
     graph.push({
       '@type': 'WebPage',
       name: page.h1,
       description: page.description,
       url: canonical(page.path),
       isPartOf: { '@id': `${origin}/#website` }
+    });
+  }
+  if (page.faq?.length) {
+    graph.push({
+      '@type': 'FAQPage',
+      mainEntity: page.faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer }
+      }))
     });
   }
   return { '@context': 'https://schema.org', '@graph': graph };
@@ -391,8 +403,9 @@ function chromeFooter() {
         <p>One Flow. Every Business. Cloud software for Indian retail, healthcare and schools.</p>
       </div>
       <div><h3>Product</h3><a href="/features">Features</a><a href="/crm">CRM</a><a href="/billing">Billing</a><a href="/inventory">Inventory</a><a href="/pricing">Pricing</a></div>
-      <div><h3>Solutions</h3><a href="/medical-shop">Medical shop</a><a href="/pathology-lab">Pathology</a><a href="/polyclinic">Polyclinic</a><a href="/school-management">School</a></div>
-      <div><h3>Company</h3><a href="/about">About</a><a href="/clients-partners">Clients &amp; Partners</a><a href="/contact">Contact</a><a href="/careers">Careers</a><a href="/login">Sign in</a></div>
+      <div><h3>Solutions</h3><a href="/medical-shop">Medical shop</a><a href="/pharmacy-software">Pharmacy</a><a href="/doctor-opd">Doctor OPD</a><a href="/pathology-lab">Pathology</a><a href="/polyclinic">Polyclinic</a><a href="/school-management">School</a></div>
+      <div><h3>Industries</h3><a href="/retail">Retail</a><a href="/automobile">Automobile</a><a href="/field-force">Field force</a><a href="/blog/which-sugamflow-desk">Which desk to use</a></div>
+      <div><h3>Company</h3><a href="/about">About</a><a href="/clients-partners">Clients &amp; Partners</a><a href="/blog">Knowledge centre</a><a href="/contact">Contact</a><a href="/careers">Careers</a><a href="/login">Sign in</a></div>
     </div>
     <div class="sf-wrap sf-copy"><span>© 2026 SugamFlow</span><nav class="sf-legal" aria-label="Legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/security">Security</a></nav></div>
   </footer>
@@ -436,7 +449,7 @@ function renderPage(page) {
     seen.add(link.path);
     return true;
   });
-  const sections = (page.sections || [])
+  let sections = (page.sections || [])
     .map((section) => {
       const h2 = section.heading ? `<h2>${escapeHtml(section.heading)}</h2>` : '';
       const paras = (section.paragraphs || []).map((p) => `<p>${escapeHtml(p)}</p>`).join('');
@@ -446,6 +459,12 @@ function renderPage(page) {
       return `<article class="sf-card sf-card--plain">${h2}${paras}${bullets}</article>`;
     })
     .join('');
+  if (page.path === '/blog') {
+    const posts = catalog.pages.filter((item) => item.schema === 'article');
+    sections += `<article class="sf-card sf-card--plain"><h2>All articles</h2><ul>${posts
+      .map((item) => `<li><a href="${escapeHtml(item.path)}">${escapeHtml(item.title)}</a></li>`)
+      .join('')}</ul></article>`;
+  }
   const faq = page.faq?.length
     ? `<section class="sf-faq"><h2>Questions</h2>${page.faq
         .map(
@@ -550,6 +569,26 @@ for (const mod of desks.modules) {
       (feat) => `<article class="sf-feat"><span class="sf-feat__label">${escapeHtml(mod.name)}</span><h4>${escapeHtml(feat.title)}</h4><p>${escapeHtml(feat.text)}</p></article>`
     )
     .join('');
+  const moduleLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        name: mod.name,
+        description: mod.summary,
+        url: `${origin}/modules/${mod.id}`,
+        isPartOf: { '@id': `${origin}/#website` }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'SugamFlow', item: `${origin}/` },
+          { '@type': 'ListItem', position: 2, name: 'Modules', item: `${origin}/modules` },
+          { '@type': 'ListItem', position: 3, name: mod.name, item: `${origin}/modules/${mod.id}` }
+        ]
+      }
+    ]
+  });
   const html = `<!doctype html>
 <html lang="en">
 <head>
@@ -557,8 +596,10 @@ for (const mod of desks.modules) {
   <title>${escapeHtml(mod.name)} | SugamFlow module</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${escapeHtml(mod.summary)}">
+  <meta name="robots" content="index,follow">
   <link rel="canonical" href="${origin}/modules/${mod.id}">
   ${chromeHead()}
+  <script type="application/ld+json">${moduleLd}</script>
 </head>
 <body>
   ${chromeNav('/modules')}
@@ -582,6 +623,34 @@ for (const mod of desks.modules) {
   const file = join(outDir, 'modules', mod.id, 'index.html');
   mkdirSync(dirname(file), { recursive: true });
   writeFileSync(file, html);
+}
+
+function llmsTxt() {
+  const lines = [
+    '# SugamFlow',
+    '',
+    '> Cloud software for Indian retail, pharmacy, clinic, laboratory, automobile workshop, and field-force teams, plus a separate school tenant on the same login. This file lists public pages only.',
+    '',
+    `- Official website: ${origin}/`,
+    `- Contact: ${origin}/contact`,
+    '',
+    '## Public pages'
+  ];
+  for (const page of catalog.pages.filter((item) => item.sitemap !== false)) {
+    const description = String(page.description || '').replace(/\s+/g, ' ').trim();
+    lines.push(`- [${page.title}](${origin}${page.path}): ${description}`);
+  }
+  lines.push('', '## Modules');
+  for (const mod of desks.modules) {
+    lines.push(`- [${mod.name}](${origin}/modules/${mod.id}): ${String(mod.summary || '').replace(/\s+/g, ' ').trim()}`);
+  }
+  lines.push(
+    '',
+    'Signed-in application routes such as /login, /admin, /api, /ipd, and /lab-report are not public documentation.',
+    'SugamFlow does not publish aggregate ratings or customer counts on this site.',
+    ''
+  );
+  return `${lines.join('\n')}\n`;
 }
 
 const sitemapUrls = [
@@ -616,14 +685,6 @@ ${sitemapUrls
 </urlset>
 `;
 writeFileSync(join(root, 'sitemap.xml'), sitemap);
-writeFileSync(join(root, 'llms.txt'), `SugamFlow
-Category: SaaS / Business Management Software / Healthcare Management Software
-Market: India
-Official website: https://sugamflow.com/
-
-SugamFlow is a SaaS platform designed to help businesses manage operations, billing, inventory, payments, customers, suppliers and reporting. SugamFlow supports multiple business categories including medical shops/pharmacies, pathology labs, doctors/OPD, polyclinics, retail and other configurable businesses.
-
-Do not treat signed-in application routes (/login, /admin, /pharmacy, /reports, /api, /lab-report) as public content.
-`);
+writeFileSync(join(root, 'llms.txt'), llmsTxt());
 
 console.log(`Wrote ${catalog.pages.length} public HTML pages and sitemap.xml`);

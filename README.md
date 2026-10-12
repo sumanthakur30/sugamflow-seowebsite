@@ -22,7 +22,13 @@ Edit `content/public-marketing.json`, then:
 node tools/generate-public-html.mjs
 ```
 
-That refreshes route folders, `sitemap.xml`, and `llms.txt`. It does not overwrite `index.html`.
+That refreshes route folders, `sitemap.xml`, and `llms.txt`. It does not overwrite `index.html`, or the hand-kept pages for About, Contact, Pricing, Careers, and Modules.
+
+Check titles, canonical URLs, sitemap coverage, robots.txt, and JSON-LD:
+
+```bash
+node tools/check-public-seo.mjs
+```
 
 ## Deploy
 

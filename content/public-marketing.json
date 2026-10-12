@@ -11,7 +11,7 @@
     {
       "path": "/crm",
       "pageId": "crm",
-      "title": "SugamFlow CRM | Leads, Pipeline, and Follow-up",
+      "title": "CRM Software for Leads, Pipeline, and Follow-up | SugamFlow",
       "description": "SugamFlow CRM is a separate signed-in desk for leads, pipeline stages, tasks, and a timeline. Conversion into a shop customer, school inquiry, or field-force record runs only when that handoff is enabled.",
       "h1": "Every customer relationship, moving forward.",
       "lead": "Capture a lead, qualify it on a pipeline, keep the follow-up, and hand it to the right workspace. CRM does not replace GST billing or the clinic desk.",
@@ -20,7 +20,9 @@
       "sitemap": true,
       "related": [
         { "path": "/features", "label": "Platform features" },
+        { "path": "/field-force", "label": "Field force management" },
         { "path": "/billing", "label": "GST billing" },
+        { "path": "/blog/which-sugamflow-desk", "label": "Which desk to use" },
         { "path": "/contact", "label": "Book a demo" }
       ],
       "faq": [
@@ -343,8 +345,10 @@
       "schema": "webpage",
       "sitemap": true,
       "related": [
+        { "path": "/crm", "label": "CRM software" },
         { "path": "/billing", "label": "GST billing software" },
         { "path": "/inventory", "label": "Inventory management software" },
+        { "path": "/blog/which-sugamflow-desk", "label": "Which desk to use" },
         { "path": "/payments-software", "label": "Payments and split collection" },
         { "path": "/ai", "label": "AI capabilities in SugamFlow" }
       ],
@@ -754,7 +758,7 @@
     {
       "path": "/field-force",
       "pageId": "field-force",
-      "title": "Field Force Software | SugamFlow",
+      "title": "Field Force Management Software | SugamFlow",
       "description": "SugamFlow field force covers promoters, salesmen, business leads, beat plans, visit activities, check-in, and conversion into a real shop. Location is stored only when the user submits it.",
       "h1": "Leads, beats, and visits for the people on the road.",
       "lead": "The field-force desk is a separate service for promoters and salesmen. It does not track a phone in the background.",
@@ -762,7 +766,9 @@
       "schema": "software",
       "sitemap": true,
       "related": [
-        { "path": "/crm", "label": "CRM desk" },
+        { "path": "/crm", "label": "CRM software" },
+        { "path": "/billing", "label": "GST billing" },
+        { "path": "/blog/which-sugamflow-desk", "label": "Which desk to use" },
         { "path": "/contact", "label": "Book a demo" }
       ],
       "faq": [
@@ -817,6 +823,7 @@
       "sitemap": true,
       "related": [
         { "path": "/docs/school-management", "label": "School documentation" },
+        { "path": "/blog/which-sugamflow-desk", "label": "Which desk to use" },
         { "path": "/pricing", "label": "Plans and modules" }
       ],
       "sections": [
@@ -874,8 +881,11 @@
       "schema": "webpage",
       "sitemap": true,
       "related": [
+        { "path": "/retail", "label": "Retail shop software" },
+        { "path": "/billing", "label": "GST billing" },
         { "path": "/medical-shop", "label": "Medical shop inventory" },
-        { "path": "/docs/inventory", "label": "Inventory documentation" }
+        { "path": "/docs/inventory", "label": "Inventory documentation" },
+        { "path": "/blog/which-sugamflow-desk", "label": "Which desk to use" }
       ],
       "sections": [
         {
@@ -1391,6 +1401,7 @@
       "schema": "webpage",
       "sitemap": true,
       "related": [
+        { "path": "/blog/which-sugamflow-desk", "label": "Which SugamFlow desk to use" },
         { "path": "/blog/what-is-pharmacy-management-software", "label": "What is pharmacy management software" },
         { "path": "/blog/gst-billing-software", "label": "GST billing software" },
         { "path": "/blog/inventory-management-software", "label": "Inventory management software" }
@@ -1399,6 +1410,93 @@
         {
           "heading": "Articles",
           "paragraphs": ["Each article explains a problem Indian operators actually have, then how SugamFlow addresses it without inventing features."]
+        }
+      ]
+    },
+    {
+      "path": "/blog/which-sugamflow-desk",
+      "pageId": "blog-which-desk",
+      "title": "CRM, Billing, Inventory, and Field Work | SugamFlow",
+      "description": "Choose among SugamFlow's CRM, GST billing, inventory, field-force, clinic, and workshop desks. This guide also states which workflows are not on this site.",
+      "h1": "Which SugamFlow desk matches the work?",
+      "lead": "SugamFlow is several signed-in desks on one login. Match the job to the desk that exists, and skip the jobs this site does not describe as shipped.",
+      "updated": "12 October 2026",
+      "schema": "article",
+      "sitemap": true,
+      "related": [
+        { "path": "/crm", "label": "CRM software" },
+        { "path": "/field-force", "label": "Field force management" },
+        { "path": "/billing", "label": "GST billing" },
+        { "path": "/inventory", "label": "Inventory" },
+        { "path": "/doctor-opd", "label": "Doctor OPD" },
+        { "path": "/automobile", "label": "Automobile workshop" },
+        { "path": "/school-management", "label": "School tenant" },
+        { "path": "/contact", "label": "Book a demo" }
+      ],
+      "faq": [
+        {
+          "question": "Is SugamFlow a manufacturing ERP?",
+          "answer": "No. The public product covers GST billing, inventory, CRM, field visits, and industry desks such as pharmacy, clinic, laboratory, and automobile workshop. This site does not describe production planning or a manufacturing shop floor."
+        },
+        {
+          "question": "Is field-force management the same as CRM?",
+          "answer": "No. CRM stores leads, pipeline stages, tasks, and a timeline. Field force stores promoters and salesmen, beat plans, visit activities, and check-in. A lead can be handed to field force only when that conversion is enabled."
+        },
+        {
+          "question": "Does field check-in track a phone all day?",
+          "answer": "No. Coordinates are stored when the signed-in user submits a check-in, check-out, lead, activity, or GPS log. There is no background tracker and no geofence."
+        },
+        {
+          "question": "Which healthcare desks are described here?",
+          "answer": "Doctor OPD, polyclinic, pharmacy, medical shop, and pathology lab each have a public page. This site does not publish a separate inpatient-ward product. Some signed-in bills can record a split payment, including bills labelled IPD."
+        },
+        {
+          "question": "Does the shop counter include school fees and attendance?",
+          "answer": "No. A SCHOOL tenant can use the same login model. Fee, attendance, and exam screens are not part of the shop workspace, and this site does not list them as shop features."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Start from the job",
+          "paragraphs": [
+            "Pick the desk that records the work you already do. A demo request on the contact page is the way to confirm a module is enabled for a tenant."
+          ]
+        },
+        {
+          "heading": "CRM",
+          "paragraphs": [
+            "Use CRM when the work is a lead, a pipeline stage, an owner, a task, and a timeline. Conversion into a shop customer, a school inquiry, or a field-force record runs only when that handoff is enabled. CRM does not print a GST invoice and it does not replace the clinic desk."
+          ]
+        },
+        {
+          "heading": "Field force",
+          "paragraphs": [
+            "Use field force for promoters and salesmen: business leads, beat plans, visit activities, check-in, and conversion into a shop record. It is not sales-force automation for inside sales, and it is not field-service dispatch for technicians. Location is stored only when the user submits it."
+          ]
+        },
+        {
+          "heading": "Billing and inventory",
+          "paragraphs": [
+            "GST billing covers invoices, print, PDF, and share. Inventory covers products, batches, expiry-oriented views, warehouse locations, transfers, purchase receipts, and stock reports inside a tenant. Retail, pharmacy, and wholesale counters share that stock spine. Pricing depends on the modules assigned to the tenant; the pricing page explains plans without a public rate card for every combination."
+          ]
+        },
+        {
+          "heading": "Clinic, pharmacy, and laboratory",
+          "paragraphs": [
+            "Doctor OPD, polyclinic, medical shop, pharmacy, and pathology lab are separate pages because the workflows differ. A polyclinic can refer a patient to an outside pharmacy or lab. This site does not publish a separate inpatient-ward product page."
+          ]
+        },
+        {
+          "heading": "Automobile workshop",
+          "paragraphs": [
+            "Automobile businesses can record the vehicle being serviced, sell spare parts, and run workshop job cards with GST billing. Showroom vehicle stock, test drives, and fleet trips are not shipped."
+          ]
+        },
+        {
+          "heading": "School",
+          "paragraphs": [
+            "A school can be registered as its own tenant and staff can sign in with the same identity model as a shop. Campus fee collection, attendance, and exams are not screens in the shop product, so this site does not market them as shop features."
+          ]
         }
       ]
     },

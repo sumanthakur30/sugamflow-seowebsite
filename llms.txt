@@ -1,8 +1,82 @@
-SugamFlow
-Category: SaaS / Business Management Software / Healthcare Management Software
-Market: India
-Official website: https://sugamflow.com/
+# SugamFlow
 
-SugamFlow is a SaaS platform designed to help businesses manage operations, billing, inventory, payments, customers, suppliers and reporting. SugamFlow supports multiple business categories including medical shops/pharmacies, pathology labs, doctors/OPD, polyclinics, retail and other configurable businesses.
+> Cloud software for Indian retail, pharmacy, clinic, laboratory, automobile workshop, and field-force teams, plus a separate school tenant on the same login. This file lists public pages only.
 
-Do not treat signed-in application routes (/login, /admin, /pharmacy, /reports, /api, /lab-report) as public content.
+- Official website: https://sugamflow.com/
+- Contact: https://sugamflow.com/contact
+
+## Public pages
+- [CRM Software for Leads, Pipeline, and Follow-up | SugamFlow](https://sugamflow.com/crm): SugamFlow CRM is a separate signed-in desk for leads, pipeline stages, tasks, and a timeline. Conversion into a shop customer, school inquiry, or field-force record runs only when that handoff is enabled.
+- [About SugamFlow – Cloud Software for Indian Businesses](https://sugamflow.com/about): SugamFlow builds multi-tenant cloud software for shops, clinics, pathology labs, pharmacies, and schools. Learn who it is for and how to start.
+- [Contact SugamFlow – Demo, Trial, and Support](https://sugamflow.com/contact): Request a SugamFlow demo or trial, or email the team. Cloud software for retail, clinic, lab, pharmacy, and school operations in India.
+- [SugamFlow Privacy Policy](https://sugamflow.com/privacy): How SugamFlow handles account, business, and healthcare-related data in a multi-tenant cloud workspace. Contact details for privacy questions.
+- [SugamFlow Terms of Use](https://sugamflow.com/terms): Terms for using SugamFlow cloud software, including accounts, acceptable use, and how to contact the team.
+- [SugamFlow Security and Data Handling](https://sugamflow.com/security): How SugamFlow isolates tenant data, uses role-based access, and keeps authenticated product screens off public search. No unverified compliance claims.
+- [What is SugamFlow | Business & Healthcare Management Software](https://sugamflow.com/sugamflow): SugamFlow is a SaaS platform for Indian businesses to manage billing, inventory, payments, customers, suppliers and reporting across medical shops, labs, clinics, retail and schools.
+- [SugamFlow Features | Billing, Inventory, Clinic & Lab](https://sugamflow.com/features): See which SugamFlow capabilities are available today: GST billing, stock, payments, clinic OPD, pathology lab, pharmacy, reports, and assistive AI.
+- [SugamFlow Pricing | Plans and Modules](https://sugamflow.com/pricing): SugamFlow plans are assigned per tenant with feature modules and limits. Request a demo for current commercial terms — this page does not invent prices.
+- [Medical Shop Management Software | SugamFlow](https://sugamflow.com/medical-shop): SugamFlow medical shop software for medicine catalog, batch stock, purchase, GST billing, expiry, suppliers, customers and split payments.
+- [Pharmacy Management Software | SugamFlow](https://sugamflow.com/pharmacy-software): SugamFlow pharmacy software for retail medical stores and in-clinic pharmacies: inventory, GST billing, dispense queue, expiry and supplier purchase.
+- [Pathology Lab Management Software | SugamFlow](https://sugamflow.com/pathology-lab): SugamFlow pathology lab software for booking, accession, department worklists, report templates, payments and a private patient report portal.
+- [Doctor OPD Management Software | SugamFlow](https://sugamflow.com/doctor-opd): SugamFlow doctor OPD software for reception visits, queue, consultation, e-prescription and visit-linked pharmacy or lab orders inside one tenant.
+- [Polyclinic Management Software | SugamFlow](https://sugamflow.com/polyclinic): SugamFlow polyclinic software connects reception, doctor OPD, in-house pharmacy, pathology lab and optional IPD in one tenant workspace.
+- [Retail Shop Management Software | SugamFlow](https://sugamflow.com/retail): SugamFlow retail software for GST billing, catalog, stock, purchase, customer dues, split payments and operational reports.
+- [Grocery Shop Management Software | SugamFlow](https://sugamflow.com/grocery): SugamFlow grocery counters use the retail shop workspace: fast GST billing, catalog, stock and supplier purchase. Not a separate consumer grocery app.
+- [Electronics Shop Management Software | SugamFlow](https://sugamflow.com/electronics): SugamFlow electronics shops use retail billing, serial-friendly catalog and stock, GST invoices and optional owner-dashboard insights.
+- [Restaurant Management Software | SugamFlow](https://sugamflow.com/restaurant): Restaurant table service, KOT and recipe costing are not a released SugamFlow product. A restaurant can use retail billing today; dedicated restaurant features are Coming Soon.
+- [Automobile Parts and Workshop Software | SugamFlow](https://sugamflow.com/automobile): SugamFlow automobile businesses record the vehicle being serviced, sell spare parts, and run workshop job cards with GST billing. Showroom vehicle stock, test drives and fleet trips are not shipped.
+- [Field Force Management Software | SugamFlow](https://sugamflow.com/field-force): SugamFlow field force covers promoters, salesmen, business leads, beat plans, visit activities, check-in, and conversion into a real shop. Location is stored only when the user submits it.
+- [Clients and Partners | SugamFlow](https://sugamflow.com/clients-partners): Published SugamFlow clients and partners. A business appears here only after a Super Admin publishes it. Listings do not create accounts.
+- [School Management Software | SugamFlow](https://sugamflow.com/school-management): SugamFlow can onboard a SCHOOL tenant on the same login and subscription as shops. Campus fee, attendance and exam screens are not in the shop workspace.
+- [GST Billing Software | SugamFlow](https://sugamflow.com/billing): SugamFlow GST billing for Indian shops and clinics: invoices from collected selling price, print/PDF, dues, and compliance screens where configured.
+- [Inventory Management Software | SugamFlow](https://sugamflow.com/inventory): SugamFlow inventory for products, batches, expiry, warehouse locations, transfers, purchase/GRN and stock reports inside a tenant workspace.
+- [Payment Collection Software | SugamFlow](https://sugamflow.com/payments-software): SugamFlow payment collection for cash, online, partial due and split payments on supported bills. The signed-in /payments route stays private.
+- [Business Reports | SugamFlow](https://sugamflow.com/business-reports): SugamFlow provides owner dashboards and operational reports after sign-in. This public page explains the categories — it does not publish customer data.
+- [AI Features | SugamFlow](https://sugamflow.com/ai): SugamFlow assistive AI includes product capture, purchase-order OCR and optional dashboard insights. Humans review before stock or clinical records change.
+- [SugamFlow FAQ | Business & Healthcare Software](https://sugamflow.com/faq): Answers about what SugamFlow is, which businesses it supports, GST billing, payments, WhatsApp invoices, AI, school ERP and how to contact the team.
+- [SugamFlow Documentation](https://sugamflow.com/docs): Public SugamFlow documentation for business types, billing, inventory, payments, reports, AI and school ERP. No API secrets or customer data.
+- [SugamFlow Docs – Overview](https://sugamflow.com/docs/overview): Overview of the SugamFlow public documentation: SaaS workspace, tenant isolation, and which pages are public versus signed-in.
+- [SugamFlow Docs – Business Types](https://sugamflow.com/docs/business-types): Business types configured in SugamFlow: retail, medical/pharmacy, pathology, polyclinic, hospital, wholesale, auto-parts and school.
+- [SugamFlow Docs – Medical Shop](https://sugamflow.com/docs/medical-shop): Operator notes for SugamFlow medical shop: catalog, stock, purchase, GST billing and collections.
+- [SugamFlow Docs – Pharmacy](https://sugamflow.com/docs/pharmacy): How SugamFlow pharmacy counters and in-clinic dispense queues work. The /pharmacy app route is private.
+- [SugamFlow Docs – Pathology Lab](https://sugamflow.com/docs/pathology-lab): Pathology lab documentation: booking, worklists, reports and private patient portal.
+- [SugamFlow Docs – Doctor OPD](https://sugamflow.com/docs/doctor-opd): Doctor OPD documentation: reception encounters, queue, consultation and e-prescription.
+- [SugamFlow Docs – Polyclinic](https://sugamflow.com/docs/polyclinic): Polyclinic documentation: combined reception, OPD, pharmacy and lab in one tenant.
+- [SugamFlow Docs – Retail](https://sugamflow.com/docs/retail): Retail documentation: POS billing, stock, purchase and GST.
+- [SugamFlow Docs – Billing](https://sugamflow.com/docs/billing): Billing documentation: collect amount equals invoice, GST, print and share.
+- [SugamFlow Docs – Inventory](https://sugamflow.com/docs/inventory): Inventory documentation: products, batches, GRN, transfers and expiry views.
+- [SugamFlow Docs – Payments](https://sugamflow.com/docs/payments): Payments documentation: cash, online, due and split collection. App /payments is private.
+- [SugamFlow Docs – Reports](https://sugamflow.com/docs/reports): Reports documentation: signed-in dashboards only. App /reports is not in the sitemap.
+- [SugamFlow Docs – AI](https://sugamflow.com/docs/ai): AI documentation: product capture, PO OCR and drafts. Review before save.
+- [SugamFlow Docs – School Management](https://sugamflow.com/docs/school-management): School ERP documentation: campus modules on the SugamFlow platform, not a shop POS.
+- [SugamFlow Docs – FAQ](https://sugamflow.com/docs/faq): Documentation FAQ pointing to the canonical public FAQ.
+- [SugamFlow Knowledge Centre](https://sugamflow.com/blog): Short practical articles about pharmacy, lab, OPD, retail, GST billing, inventory and digital invoices — written from how SugamFlow actually works.
+- [CRM, Billing, Inventory, and Field Work | SugamFlow](https://sugamflow.com/blog/which-sugamflow-desk): Choose among SugamFlow's CRM, GST billing, inventory, field-force, clinic, and workshop desks. This guide also states which workflows are not on this site.
+- [What is Pharmacy Management Software? | SugamFlow](https://sugamflow.com/blog/what-is-pharmacy-management-software): Pharmacy management software tracks medicines, batches, purchase, GST bills and expiry. How SugamFlow does that for Indian medical shops.
+- [Medical Shop Management Software | SugamFlow Blog](https://sugamflow.com/blog/medical-shop-management-software): What a medical shop needs from management software: GST bills, batches, expiry, suppliers and collections.
+- [Pathology Lab Management Software | SugamFlow Blog](https://sugamflow.com/blog/pathology-lab-management-software): What LIS-style lab software must do: booking, accession, worklists and private report delivery.
+- [Doctor OPD Management Software | SugamFlow Blog](https://sugamflow.com/blog/doctor-opd-management-software): OPD software should run queue, consultation and prescription for a clinic — not list patients on Google.
+- [Polyclinic Management Software | SugamFlow Blog](https://sugamflow.com/blog/polyclinic-management-software): Polyclinic software connects front desk, doctors, pharmacy and lab so the same patient is not re-registered at every counter.
+- [Retail Shop Management Software | SugamFlow Blog](https://sugamflow.com/blog/retail-shop-management-software): Retail shop software needs GST invoices, stock and dues — the same spine grocery and electronics shops use on SugamFlow.
+- [GST Billing Software | SugamFlow Blog](https://sugamflow.com/blog/gst-billing-software): GST billing software should invoice the collected selling price and only push e-Invoice when a GSP is actually configured.
+- [Inventory Management Software | SugamFlow Blog](https://sugamflow.com/blog/inventory-management-software): Inventory software should post stock only after a human confirms GRN or a sale — OCR is a draft.
+- [Split Payment Billing | SugamFlow Blog](https://sugamflow.com/blog/split-payment-billing): Split payment billing records cash and online on the same bill. How SugamFlow uses it on supported documents.
+- [Digital Invoice Management | SugamFlow Blog](https://sugamflow.com/blog/digital-invoice-management): Digital invoices in SugamFlow: print, PDF and WhatsApp-oriented share from the same collect amount. No public invoice search.
+
+## Modules
+- [Billing & POS](https://sugamflow.com/modules/billing): Fast checkout, partial payments, dues, GST on the collected amount, and printable invoices.
+- [Inventory & warehouse](https://sugamflow.com/modules/inventory): On-hand stock, batches, near-expiry, transfers, rack/bin, barcode labels and stock intelligence.
+- [Purchase & procurement](https://sugamflow.com/modules/purchase): Purchase orders, GRN, suppliers, auto-PO queue, OCR draft import, inspections and AP invoices.
+- [Finance & credit](https://sugamflow.com/modules/finance): Party ledger, collection desk, credit control, AR/AP ageing, cash book and final accounts — on the finance-lite pack.
+- [GST & compliance](https://sugamflow.com/modules/gst): GST on everyday bills, GSTR summary, GST recon / ITC. e-Invoice and e-Way only when gst-service is configured.
+- [Clinic workflows](https://sugamflow.com/modules/clinic): Reception, doctor queue, e-prescription, visit billing, in-house pharmacy and lab referrals. Nursing/IPD is hospital-only.
+- [School campus](https://sugamflow.com/modules/school): School is a platform tenant and website domain — not the shop POS. Fee, attendance and exam screens are not in shop-management-ui.
+- [Staff & roles](https://sugamflow.com/modules/staff): Invite staff. Role templates and permission JSON decide which desk opens — owner, cashier, doctor, accountant.
+- [Customers & parties](https://sugamflow.com/modules/parties): Party master: customers, patients or buyers — GSTIN and credit fields where the type needs them. Not a CRM pipeline.
+- [Wholesale & distribution](https://sugamflow.com/modules/wholesale): Dayboard, sale bill, challan, delivery run, beat plan, bill desk and collections — WHOLESALE pack only.
+- [Pathology laboratory](https://sugamflow.com/modules/laboratory): Booking, accession, worklist, report release, payments. Patient portal is OTP — no public report list.
+- [Reports](https://sugamflow.com/modules/reports): Report centre catalogue: sales, purchase, stock, finance, GST and party. Dashboards stay inside the tenant.
+
+Signed-in application routes such as /login, /admin, /api, /ipd, and /lab-report are not public documentation.
+SugamFlow does not publish aggregate ratings or customer counts on this site.
+
