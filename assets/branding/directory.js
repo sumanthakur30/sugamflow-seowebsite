@@ -35,10 +35,24 @@
       .catch(function () {});
   }
 
+  function initials(name) {
+    var parts = text(name).trim().split(/\s+/).filter(Boolean);
+    var letters = (parts[0] || '?').charAt(0) + (parts[1] ? parts[1].charAt(0) : '');
+    return escapeHtml(letters.toUpperCase());
+  }
+
+  function logo(row) {
+    var mark = '<span class="sf-dir__fallback">' + initials(row.displayName) + '</span>';
+    if (!row.logoUrl) {
+      return '<span class="sf-dir__logo">' + mark + '</span>';
+    }
+    return '<span class="sf-dir__logo"><img src="' + escapeHtml(row.logoUrl) + '" alt="' + escapeHtml(row.displayName) + '" onerror="this.hidden=true;this.nextElementSibling.hidden=false;"><span class="sf-dir__fallback" hidden>' + initials(row.displayName) + '</span></span>';
+  }
+
   function card(row) {
-    var logo = row.logoUrl ? '<img src="' + escapeHtml(row.logoUrl) + '" alt="">' : '';
     var site = row.website ? '<a href="' + escapeHtml(row.website) + '" rel="noopener noreferrer">Website</a>' : '';
-    return '<article class="sf-dir__card"><a href="#/' + escapeHtml(row.slug) + '">' + logo + '<h2>' + escapeHtml(row.displayName) + '</h2></a><p>' + escapeHtml(row.shortDescription) + '</p><p>' + escapeHtml(row.organizationType) + (row.locationLabel ? ' · ' + escapeHtml(row.locationLabel) : '') + '</p>' + site + '</article>';
+    var industry = row.industryCode ? ' · ' + escapeHtml(row.industryCode) : '';
+    return '<article class="sf-dir__card"><a href="#/' + escapeHtml(row.slug) + '">' + logo(row) + '<h2>' + escapeHtml(row.displayName) + '</h2></a><p>' + escapeHtml(row.shortDescription) + '</p><p>' + escapeHtml(row.organizationType) + industry + (row.locationLabel ? ' · ' + escapeHtml(row.locationLabel) : '') + '</p>' + site + '</article>';
   }
 
   function render() {
@@ -50,7 +64,7 @@
       return (text(row.displayName) + ' ' + text(row.organizationName) + ' ' + text(row.shortDescription)).toLowerCase().indexOf(query) !== -1;
     });
     list.innerHTML = visible.map(card).join('');
-    status.textContent = visible.length ? visible.length + ' published organization' + (visible.length === 1 ? '' : 's') + '.' : 'No published organization matches. Draft records stay private.';
+    status.textContent = visible.length ? visible.length + ' organization' + (visible.length === 1 ? '' : 's') + '.' : 'No organization matches. Pending, hidden, and draft records stay private.';
   }
 
   function showDetail() {
@@ -82,7 +96,7 @@
       showDetail();
     })
     .catch(function () {
-      status.textContent = 'The directory could not be loaded. Nothing is shown until the public list is available.';
+      status.textContent = 'The directory could not be loaded. Refresh the page to try again.';
     });
 
   loadIndustries();

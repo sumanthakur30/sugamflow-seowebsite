@@ -564,8 +564,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 @media (min-width: 720px) { .sf-dir__grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1100px) { .sf-dir__grid { grid-template-columns: repeat(3, 1fr); } }
 .sf-dir__card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 1rem; display: grid; gap: .35rem; }
-.sf-dir__card img { width: 56px; height: 56px; object-fit: contain; }
-.sf-dir__card h2 { margin: 0; font-size: 1.05rem; }
+.sf-dir__logo { width: 72px; height: 72px; display: grid; place-items: center; border-radius: 12px; background: #f4f7f5; overflow: hidden; }
+.sf-dir__logo img, .sf-dir__card img { width: 100%; height: 72px; object-fit: contain; background: #fff; }
+.sf-dir__fallback { font-weight: 700; letter-spacing: .04em; color: var(--ink); }
+.sf-dir__card h2 { margin: 0; font-size: 1.05rem; overflow-wrap: anywhere; }
 .sf-dir__card p, .sf-dir__detail p { margin: 0; color: var(--ink-soft); }
 .sf-dir__detail, .sf-dir__form { margin-top: 1.2rem; display: grid; gap: .7rem; }
 .sf-dir__form { max-width: 40rem; }
