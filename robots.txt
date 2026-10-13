@@ -62,6 +62,8 @@ Disallow: /users
 Disallow: /staff
 Disallow: /shops
 Disallow: /owner-dashboard
+# Public wholesale landing. The signed-in desk below stays blocked.
+Allow: /wholesale-erp
 Disallow: /wholesale$
 Disallow: /wholesale/
 Disallow: /finance/

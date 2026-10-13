@@ -60,7 +60,18 @@ function meta(html, name) {
 
 record('index.html', home.match(/<title>([^<]*)<\/title>/)?.[1], meta(home, 'description'));
 if (!home.includes('rel="canonical" href="https://sugamflow.com/"')) fail('homepage canonical is missing');
-if (!home.includes('<h1')) fail('homepage is missing an h1');
+if (!home.includes('<h1>One Flow. Every Business.</h1>')) fail('homepage h1 is not the brand lockup');
+const homeLd = home.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+if (!homeLd) fail('homepage JSON-LD is missing');
+else {
+  try {
+    const data = JSON.parse(homeLd[1]);
+    const org = data['@graph']?.find((node) => node['@type'] === 'Organization');
+    if (org?.legalName !== 'SugamFlow ERP Solutions Pvt. Ltd.') fail('homepage organization legal name is missing');
+  } catch (error) {
+    fail(`invalid homepage JSON-LD: ${error.message}`);
+  }
+}
 
 const pages = catalog.pages.filter((item) => item.sitemap !== false);
 for (const page of pages) {
@@ -100,6 +111,9 @@ if (!guide) fail('selection guide page is missing from the catalog');
 if (!llms.includes('https://sugamflow.com/crm')) fail('llms.txt does not point at the CRM page');
 if (!llms.includes('/blog/which-sugamflow-desk')) fail('llms.txt does not point at the selection guide');
 if (!locSet.has('https://sugamflow.com/blog/which-sugamflow-desk')) fail('sitemap is missing the selection guide');
+if (!locSet.has('https://sugamflow.com/wholesale-erp')) fail('sitemap is missing /wholesale-erp');
+if (!robots.includes('Allow: /wholesale-erp')) fail('robots.txt does not allow the public wholesale page');
+if (!robots.includes('Disallow: /wholesale$')) fail('robots.txt must keep the private /wholesale desk blocked');
 
 for (const id of ['billing', 'inventory', 'school', 'clinic']) {
   const file = join(root, 'modules', id, 'index.html');

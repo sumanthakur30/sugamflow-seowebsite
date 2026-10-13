@@ -619,7 +619,8 @@
       "related": [
         { "path": "/grocery", "label": "Grocery shop software" },
         { "path": "/electronics", "label": "Electronics shop software" },
-        { "path": "/billing", "label": "GST billing software" }
+        { "path": "/billing", "label": "GST billing software" },
+        { "path": "/wholesale-erp", "label": "Wholesale ERP software" }
       ],
       "sections": [
         {
@@ -632,6 +633,58 @@
           "heading": "Stock and purchase",
           "paragraphs": [
             "Products, stock adjustments, locations/transfers where enabled, and supplier GRN keep the shelf aligned with the bill."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/wholesale-erp",
+      "pageId": "wholesale-erp",
+      "title": "Wholesale ERP Software for Distributors | SugamFlow",
+      "description": "SugamFlow wholesale ERP covers sales orders, delivery challans, buyer credit and GST invoices when the wholesale pack is assigned. The signed-in desk stays private.",
+      "h1": "Wholesale ERP for distributors",
+      "lead": "A distributor is not running a retail counter. On a wholesale subscription, staff raise sales orders, send delivery challans, and collect against buyer credit. That desk is separate from retail billing, and it is not included on every plan.",
+      "updated": "13 October 2026",
+      "schema": "software",
+      "sitemap": true,
+      "related": [
+        { "path": "/billing", "label": "GST billing software" },
+        { "path": "/inventory", "label": "Inventory management software" },
+        { "path": "/modules/wholesale", "label": "Wholesale module screens" },
+        { "path": "/retail", "label": "Retail shop software" },
+        { "path": "/contact", "label": "Book a demo" }
+      ],
+      "faq": [
+        {
+          "question": "Is wholesale the same screen as retail billing?",
+          "answer": "No. Retail billing and the wholesale desk are separate workspaces. Sales orders, delivery challans, beat plans and collections appear only when the wholesale pack is assigned to that tenant."
+        },
+        {
+          "question": "Can I open live orders from this page?",
+          "answer": "No. This is a public description. Staff sign in to the private application. Customer orders, prices and stock are not published here."
+        },
+        {
+          "question": "Does every SugamFlow plan include wholesale?",
+          "answer": "No. Wholesale is a capability pack. Retail, pharmacy, clinic, laboratory and school desks stay on their own configuration. Ask for a quote for the pack you need."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "The operating problem",
+          "paragraphs": [
+            "Goods leave on a challan, a beat or a delivery run, and payment often arrives later. Putting that work on a retail POS hides dues, dispatch status and the difference between an order and a tax invoice."
+          ]
+        },
+        {
+          "heading": "What the wholesale pack includes",
+          "paragraphs": [
+            "When the pack is enabled, staff use a dayboard, sales orders, delivery challans, delivery runs, beat plans, a bill desk and collections. Party rate contracts and buyer credit limits sit on the customer. A tax invoice can carry GSTIN and transport fields. e-Invoice generation runs only when that GST integration is turned on for the tenant."
+          ]
+        },
+        {
+          "heading": "What stays private",
+          "paragraphs": [
+            "The signed-in wholesale workspace is not a public URL. This page does not list live stock, party ledgers or invoice files. Retail, clinic and school work remain separate desks on the same company login."
           ]
         }
       ]

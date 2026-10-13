@@ -126,8 +126,8 @@ window.SF_PRODUCT = {
       headline: 'Sale, challan, invoice and credit in one depot.',
       description: 'Wholesale is a capability pack: dayboard, B2B sales orders, delivery challans, buyer credit and collections — not a renamed retail bill.',
       ico: 'WS',
-      href: '/features',
-      hrefLabel: 'Explore platform features →',
+      href: '/wholesale-erp',
+      hrefLabel: 'Explore wholesale ERP →',
       chips: ['Sales orders', 'Delivery challan', 'Rate contracts', 'Buyer credit', 'Collections', 'Beat & delivery', 'AR ageing', 'GST / e-invoice hook'],
       features: [
         { label: 'Sales', title: 'B2B sales orders', text: 'Create, confirm and invoice wholesale SOs. Bill desk holds estimates. Digital entry and partner digital orders exist.' },

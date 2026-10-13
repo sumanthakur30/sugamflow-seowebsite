@@ -249,6 +249,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   background: #fff; border: 1px solid var(--line); border-radius: 999px;
   padding: .55rem .9rem; font-weight: 700; font-size: .85rem;
 }
+a.sf-chip { color: inherit; text-decoration: none; }
+a.sf-chip:hover { border-color: var(--brand, #0a7a5a); }
 
 .sf-section { padding: 4.2rem 0; }
 .sf-section--paper { background: var(--paper); }
